@@ -6,4 +6,5 @@
     lastName: string;
     email: string;
     token: string;
+    roles: Array<string>
 }

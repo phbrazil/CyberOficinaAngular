@@ -3,6 +3,17 @@ import { first } from 'rxjs/operators';
 
 import { AccountService } from '@app/_services';
 
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class AuthService {
+
+  public getToken(): string {
+    return localStorage.getItem('token');
+  }
+
+}
+
 @Component({ templateUrl: 'list.component.html' })
 export class ListComponent implements OnInit {
     users = null;
@@ -10,9 +21,10 @@ export class ListComponent implements OnInit {
     constructor(private accountService: AccountService) {}
 
     ngOnInit() {
-        this.accountService.getAll()
-            .pipe(first())
+
+        this.accountService.getAll().pipe(first())
             .subscribe(users => this.users = users);
+            
     }
 
     deleteUser(id: string) {
