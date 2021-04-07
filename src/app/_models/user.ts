@@ -5,6 +5,7 @@
     firstName: string;
     lastName: string;
     email: string;
+    cpfcnpj: string;
     token: string;
     roles: Array<string>
 }

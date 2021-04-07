@@ -7,9 +7,18 @@ import { AccountService, AlertService } from '@app/_services';
 
 @Component({ templateUrl: 'register.component.html' })
 export class RegisterComponent implements OnInit {
+
     form: FormGroup;
     loading = false;
     submitted = false;
+
+    isCPF(): boolean{
+        return this.form.value.cpfcnpj == null ? true : this.form.value.cpfcnpj.length < 12 ? true : false;
+     }
+     
+     getCpfCnpjMask(): string{
+        return this.isCPF() ? '000.000.000-009' : '00.000.000/0000-00';
+     }
 
     constructor(
         private formBuilder: FormBuilder,
@@ -20,11 +29,14 @@ export class RegisterComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+
+        
         this.form = this.formBuilder.group({
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
             username: ['', Validators.required],
             email: ['', Validators.required],
+            cpfcnpj: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]]
         });
     }

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './_services/auth.interceptor';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -13,12 +14,17 @@ import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home';
 
+const maskConfig: Partial<IConfig> = {
+    validation: false,
+  };
+  
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NgxMaskModule.forRoot(maskConfig),
     ],
     declarations: [
         AppComponent,

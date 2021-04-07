@@ -2,11 +2,24 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
 import { AccountService, AlertService } from '@app/_services';
+
+
 
 @Component({ templateUrl: 'add-edit.component.html' })
 export class AddEditComponent implements OnInit {
+
+    //MASCARA CPF CNPJ
+    isCPF(): boolean{
+
+        return this.form.value.cpfcnpj == null ? 
+        true : this.form.value.cpfcnpj.lenth < 12 ? true : false;
+    }
+
+    getCpfCnpjMask(): string{
+        return this.isCPF() ? '000.000.000-009' : '00.000.000/0000-00';
+    }
+
     form: FormGroup;
     id: string;
     isAddMode: boolean;
@@ -18,10 +31,14 @@ export class AddEditComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private accountService: AccountService,
-        private alertService: AlertService
+        private alertService: AlertService,
     ) {}
 
+
+
     ngOnInit() {
+
+        
         this.id = this.route.snapshot.params['id'];
         this.isAddMode = !this.id;
 
@@ -35,6 +52,8 @@ export class AddEditComponent implements OnInit {
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
             username: ['', Validators.required],
+            email: ['', Validators.required],
+            cpfcnpj: ['', Validators.required],
             password: ['', passwordValidators]
         });
 
@@ -45,8 +64,13 @@ export class AddEditComponent implements OnInit {
                     this.f.firstName.setValue(x.firstName);
                     this.f.lastName.setValue(x.lastName);
                     this.f.username.setValue(x.username);
+                    this.f.email.setValue(x.email);
+                    this.f.cpfcnpj.setValue(x.cpfcnpj);
+
                 });
         }
+
+        
     }
 
     // convenience getter for easy access to form fields
@@ -98,4 +122,6 @@ export class AddEditComponent implements OnInit {
                     this.loading = false;
                 });
     }
+
+  
 }

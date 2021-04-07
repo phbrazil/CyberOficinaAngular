@@ -50,8 +50,8 @@ export class AccountService {
       //return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
       return this.http.post<User>('http://localhost:8080/cyberoficina/api/auth/signin', { username, password })
        .pipe(map(user => {
-          console.log(user);
-          console.log(user.token);
+          //console.log(user);
+          //console.log(user.token);
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
                 localStorage.setItem('token', JSON.stringify(user.token));
@@ -109,7 +109,12 @@ export class AccountService {
     }
 
     update(id, params) {
-        return this.http.put(`${environment.apiUrl}/users/${id}`, params)
+
+        const url = `http://localhost:8080/cyberoficina/api/auth/editUser/${id}`;
+
+        return this.http.put(url, params)
+
+        //return this.http.put(`${environment.apiUrl}/users/${id}`, params)
             .pipe(map(x => {
                 // update stored user if the logged in user updated their own record
                 if (id == this.userValue.id) {
