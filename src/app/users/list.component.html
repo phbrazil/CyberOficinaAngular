@@ -6,6 +6,8 @@
             <th style="width: 30%">Primeiro Nome</th>
             <th style="width: 30%">Último Nome</th>
             <th style="width: 30%">Usuário</th>
+            <th style="width: 30%">Email</th>
+            <th style="width: 30%">CPF/CNPJ</th>
             <th style="width: 10%"></th>
         </tr>
     </thead>
@@ -14,6 +16,8 @@
             <td>{{user.firstName}}</td>
             <td>{{user.lastName}}</td>
             <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.cpfcnpj}}</td>
             <td style="white-space: nowrap">
                 <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary mr-1">Editar</a>
                 <button (click)="deleteUser(user.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="user.isDeleting">
