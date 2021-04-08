@@ -2,13 +2,12 @@
     "name": "angular-9-registration-login-example",
     "version": "0.0.0",
     "scripts": {
-        "ng": "ng",
+        "ng": "ng build --base-href ./",
         "start": "ng serve --open",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e",
-        "github": "ng build --prod --output-path docs --base-href /LoginFrontJWTAngular9"
+        "e2e": "ng e2e"
     },
     "private": true,
     "dependencies": {
