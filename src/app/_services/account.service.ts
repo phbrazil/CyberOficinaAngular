@@ -130,7 +130,12 @@ export class AccountService {
     }
 
     delete(id: string) {
-        return this.http.delete(`${environment.apiUrl}/users/${id}`)
+        
+        const url = `http://localhost:8080/cyberoficina/api/auth/deleteUser/${id}`;
+        
+        return this.http.delete(url)
+
+       // return this.http.delete(`${environment.apiUrl}/users/${id}`)
             .pipe(map(x => {
                 // auto logout if the logged in user deleted their own record
                 if (id == this.userValue.id) {
