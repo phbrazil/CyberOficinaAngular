@@ -48,7 +48,7 @@ export class AccountService {
 
     login(username, password) {
 
-        const url = 'https://34.71.7.57:8443/cyberoficina/api/auth/signin';
+        const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
       // const url = 'https://localhost:8443/cyberoficina/api/auth/signin';
       //return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
@@ -72,7 +72,7 @@ export class AccountService {
     }
 
     register(user: User) {
-        return this.http.post('https://34.71.7.57:8443/cyberoficina/api/auth/signup', user);
+        return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', user);
       //return this.http.post('https://localhost:8443/cyberoficina/api/auth/signup', user);
         //return this.http.post(`${environment.apiUrl}/users/register`, user);
     }
@@ -85,7 +85,7 @@ export class AccountService {
         headers: new HttpHeaders()
           .set('Authorization',  `Basic ${btoa(token)}`)
       }
-        const url = 'https://34.71.7.57:8443/cyberoficina/api/auth/users';
+        const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
 
         //const url = 'https://localhost:8443/cyberoficina/api/auth/users';
         //const url = `${environment.apiUrl}/users`;
@@ -107,7 +107,7 @@ export class AccountService {
 
     getById(id: string){
 
-        const url = `https://34.71.7.57:8443/cyberoficina/api/auth/user/${id}`;
+        const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
 
         //const url = `https://localhost:8443/cyberoficina/api/auth/user/${id}`;
     
@@ -119,7 +119,7 @@ export class AccountService {
     update(id, params) {
 
         //const url = `https://localhost:8443/cyberoficina/api/auth/editUser/${id}`;
-        const url = `https://34.71.7.57:8443/cyberoficina/api/auth/editUser/${id}`;
+        const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUser/${id}`;
 
         return this.http.put(url, params)
 
@@ -141,7 +141,7 @@ export class AccountService {
     delete(id: string) {
         
         //const url = `https://localhost:8443/cyberoficina/api/auth/deleteUser/${id}`;
-        const url = `https://34.71.7.57:8443/cyberoficina/api/auth/deleteUser/${id}`;
+        const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
         
         return this.http.delete(url)
 
