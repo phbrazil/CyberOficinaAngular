@@ -1,27 +1,39 @@
 import { Injectable } from '@angular/core';
-import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
+import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '@environments/environment';
 import { AccountService } from '@app/_services';
+import { finalize, catchError, switchMap, take, filter } from 'rxjs/operators';
+import { User } from '@app/_models';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
-    constructor(private accountService: AccountService) { }
+  isRefreshingToken: boolean = false;
+  public newUser: Observable<User>;
+  tokenSubject: BehaviorSubject<string> = new BehaviorSubject<string>(null);
 
-    intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        // add auth header with jwt if user is logged in and request is to the api url
-        const user = this.accountService.userValue;
-        const isLoggedIn = user && user.token;
-        const isApiUrl = request.url.startsWith(environment.apiUrl);
-        if (isLoggedIn && isApiUrl) {
-            request = request.clone({
-                setHeaders: {
-                    Authorization: `Bearer ${user.token}`
-                }
-            });
+  constructor(private accountService: AccountService) { }
+
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    // add auth header with jwt if user is logged in and request is to the api url
+    const user = this.accountService.userValue;
+    const isLoggedIn = user && user.token;
+    const isApiUrl = request.url.startsWith("http://localhost" ||
+      "https://www.cyberoficina.com.br");
+
+    if (isLoggedIn && isApiUrl) {
+      request = request.clone({
+        setHeaders: {
+          Authorization: `Bearer ${user.token}`
         }
+      });
 
-        return next.handle(request);
     }
+
+
+    return next.handle(request);
+
+
+  };
+
 }

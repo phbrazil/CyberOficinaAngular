@@ -27,38 +27,36 @@ export class AccountService {
 
     private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
-    
-          // TODO: send the error to remote logging infrastructure
-          console.error(error); // log to console instead
-    
-          // TODO: better job of transforming error for user consumption
-          this.log(`${operation} failed: ${error.message}`);
-    
-          // Let the app keep running by returning an empty result.
-          return of(result as T);
-        };
-      }
 
-       /** Log a HeroService message with the MessageService */
-  private log(message: string) {
-      console.log(message);
-    //this.messageService.add(`HeroService: ${message}`);
-  }
+            // TODO: send the error to remote logging infrastructure
+            console.error(error); // log to console instead
+
+            // TODO: better job of transforming error for user consumption
+            this.log(`${operation} failed: ${error.message}`);
+
+            // Let the app keep running by returning an empty result.
+            return of(result as T);
+        };
+    }
+
+    /** Log a HeroService message with the MessageService */
+    private log(message: string) {
+        console.log(message);
+        //this.messageService.add(`HeroService: ${message}`);
+    }
 
 
     login(username, password) {
 
         const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
-      // const url = 'https://localhost:8443/cyberoficina/api/auth/signin';
-      //return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
-      return this.http.post<User>(url, { username, password })
-       .pipe(map(user => {
-          //console.log(user);
-          //console.log(user.token);
+        // const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
+        //return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
+        return this.http.post<User>(url, { username, password })
+            .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
-                localStorage.setItem('token', JSON.stringify(user.token));
+                localStorage.setItem('token', user.token);
                 this.userSubject.next(user);
                 return user;
             }));
@@ -67,27 +65,28 @@ export class AccountService {
     logout() {
         // remove user from local storage and set current user to null
         localStorage.removeItem('user');
+        localStorage.removeItem('token');
         this.userSubject.next(null);
         this.router.navigate(['/account/login']);
     }
 
     register(user: User) {
         return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', user);
-      //return this.http.post('https://localhost:8443/cyberoficina/api/auth/signup', user);
+        //return this.http.post('http://localhost:8443/cyberoficina/api/auth/signup', user);
         //return this.http.post(`${environment.apiUrl}/users/register`, user);
     }
 
     getAll() {
 
-       var token = localStorage.getItem('token');
+        const token = localStorage.getItem('token');
 
-       var header = {
-        headers: new HttpHeaders()
-          .set('Authorization',  `Basic ${btoa(token)}`)
-      }
+        var header = {
+            headers: new HttpHeaders()
+                .set('Authorization', `Basic ${btoa(token)}`)
+        }
         const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
 
-        //const url = 'https://localhost:8443/cyberoficina/api/auth/users';
+        //const url = 'http://localhost:8443/cyberoficina/api/auth/users';
         //const url = `${environment.apiUrl}/users`;
 
         //let users = this.http.get(url);
@@ -97,20 +96,26 @@ export class AccountService {
         //return this.http.get<User[]>(`${environment.apiUrl}/users`);
 
         return this.http.get<User[]>(url, header)
-        .pipe(map(users => {
-            console.log(users);
+            .pipe(map(users => {
+
                 return users;
-            }));
-            
+            },
+                error => {
+                    console.log(error);
+                }
+            ));
+
+
+
     }
 
 
-    getById(id: string){
+    getById(id: string) {
 
         const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
 
         //const url = `https://localhost:8443/cyberoficina/api/auth/user/${id}`;
-    
+
         //return this.http.get<User>(`${environment.apiUrl}/users/${id}`);
 
         return this.http.get<User>(url);
@@ -123,7 +128,7 @@ export class AccountService {
 
         return this.http.put(url, params)
 
-        //return this.http.put(`${environment.apiUrl}/users/${id}`, params)
+            //return this.http.put(`${environment.apiUrl}/users/${id}`, params)
             .pipe(map(x => {
                 // update stored user if the logged in user updated their own record
                 if (id == this.userValue.id) {
@@ -139,13 +144,13 @@ export class AccountService {
     }
 
     delete(id: string) {
-        
+
         //const url = `https://localhost:8443/cyberoficina/api/auth/deleteUser/${id}`;
         const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
-        
+
         return this.http.delete(url)
 
-       // return this.http.delete(`${environment.apiUrl}/users/${id}`)
+            // return this.http.delete(`${environment.apiUrl}/users/${id}`)
             .pipe(map(x => {
                 // auto logout if the logged in user deleted their own record
                 if (id == this.userValue.id) {
@@ -154,4 +159,6 @@ export class AccountService {
                 return x;
             }));
     }
+
+
 }
