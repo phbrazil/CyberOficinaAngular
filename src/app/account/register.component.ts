@@ -20,10 +20,6 @@ export class RegisterComponent implements OnInit {
         return this.isCPF() ? '000.000.000-009' : '00.000.000/0000-00';
      }
 
-
-   getCep(year: string): void {
-      console.log(year);
-   }
  
     constructor(
         private formBuilder: FormBuilder,
@@ -54,6 +50,20 @@ export class RegisterComponent implements OnInit {
     get f() { return this.form.controls; }
 
   
+    getCep(cep: string): void {
+
+        this.accountService.cep(cep)
+            .pipe(first())
+            .subscribe(
+                data => {
+                    console.log(data.logradouro);
+                    this.alertService.success('Cep consultado com sucesso', { keepAfterRouteChange: false });
+                },
+                error => {
+                    this.alertService.error(error);
+                    this.loading = false;
+                });     
+        }
 
     onSubmit() {
         this.submitted = true;

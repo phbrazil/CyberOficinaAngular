@@ -45,6 +45,17 @@ export class AccountService {
         //this.messageService.add(`HeroService: ${message}`);
     }
 
+    cep(cep) {
+
+         let url = `http://localhost:8443/cyberoficina/getCep/${cep}`;
+        return this.http.get<any>(url)
+            .pipe(map(dados => {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                console.log(dados.dados.logradouro+'hueheuheu');
+                return dados;
+            }));
+    }
+
 
     login(username, password) {
 
@@ -84,9 +95,9 @@ export class AccountService {
             headers: new HttpHeaders()
                 .set('Authorization', `Basic ${btoa(token)}`)
         }
-        const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
+        //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
 
-        //const url = 'http://localhost:8443/cyberoficina/api/auth/users';
+        const url = 'http://localhost:8443/cyberoficina/api/auth/users';
         //const url = `${environment.apiUrl}/users`;
 
         //let users = this.http.get(url);
@@ -112,9 +123,9 @@ export class AccountService {
 
     getById(id: string) {
 
-        const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
+        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
 
-        //const url = `https://localhost:8443/cyberoficina/api/auth/user/${id}`;
+        const url = `http://localhost:8443/cyberoficina/api/auth/user/${id}`;
 
         //return this.http.get<User>(`${environment.apiUrl}/users/${id}`);
 
@@ -123,8 +134,8 @@ export class AccountService {
 
     update(id, params) {
 
-        //const url = `https://localhost:8443/cyberoficina/api/auth/editUser/${id}`;
-        const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUser/${id}`;
+        const url = `http://localhost:8443/cyberoficina/api/auth/editUser/${id}`;
+        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUser/${id}`;
 
         return this.http.put(url, params)
 
@@ -145,8 +156,8 @@ export class AccountService {
 
     delete(id: string) {
 
-        //const url = `https://localhost:8443/cyberoficina/api/auth/deleteUser/${id}`;
-        const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
+        const url = `http://localhost:8443/cyberoficina/api/auth/deleteUser/${id}`;
+        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
 
         return this.http.delete(url)
 
