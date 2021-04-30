@@ -7,6 +7,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '@environments/environment';
 import { User } from '@app/_models';
 import { AuthService } from '@app/users/list.component';
+import { AlertService } from './alert.service';
 
 @Injectable({ providedIn: 'root' })
 export class AccountService {
@@ -16,6 +17,8 @@ export class AccountService {
     constructor(
         private router: Router,
         private http: HttpClient,
+        private alertService: AlertService
+
     ) {
         this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
         this.user = this.userSubject.asObservable();
@@ -45,16 +48,32 @@ export class AccountService {
         //this.messageService.add(`HeroService: ${message}`);
     }
 
-    cep(cep) {
+    cep(cep: string) {
 
-         let url = `http://localhost:8443/cyberoficina/getCep/${cep}`;
-        return this.http.get<any>(url)
-            .pipe(map(dados => {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                console.log(dados.dados.logradouro+' hueheuheu');
-                return dados;
-            }));
-    }
+        cep = cep.replace(/\D/g,'');
+
+        if(cep!==''){
+
+            const validaCep = /^[0-9]{8}$/;
+
+            if(validaCep.test(cep)){
+                let url = `http://localhost:8443/cyberoficina/getCep/${cep}`;
+                return this.http.get<any>(url)
+                    .pipe(map(dados => {
+                        this.alertService.success('Cep válido', { keepAfterRouteChange: true });
+
+                        return dados;
+                    }));
+            }else{
+                this.alertService.error('Cep inválido', { keepAfterRouteChange: true });
+
+            }
+        }
+ }
+
+
+
+
 
 
     login(username, password) {
