@@ -56,7 +56,6 @@ export class RegisterComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    console.log(data.logradouro);
                     this.alertService.success('Cep consultado com sucesso', { keepAfterRouteChange: false });
                 },
                 error => {

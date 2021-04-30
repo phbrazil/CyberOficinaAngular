@@ -51,7 +51,7 @@ export class AccountService {
         return this.http.get<any>(url)
             .pipe(map(dados => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                console.log(dados.dados.logradouro+'hueheuheu');
+                console.log(dados.dados.logradouro+' hueheuheu');
                 return dados;
             }));
     }
