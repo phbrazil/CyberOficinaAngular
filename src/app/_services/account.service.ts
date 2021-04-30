@@ -48,9 +48,9 @@ export class AccountService {
 
     login(username, password) {
 
-        const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
+        //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
-        // const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
+         const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
         //return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
         return this.http.post<User>(url, { username, password })
             .pipe(map(user => {
@@ -71,8 +71,8 @@ export class AccountService {
     }
 
     register(user: User) {
-        return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', user);
-        //return this.http.post('http://localhost:8443/cyberoficina/api/auth/signup', user);
+        //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', user);
+        return this.http.post('http://localhost:8443/cyberoficina/api/auth/signup', user);
         //return this.http.post(`${environment.apiUrl}/users/register`, user);
     }
 
