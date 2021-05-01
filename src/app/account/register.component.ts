@@ -78,6 +78,18 @@ export class RegisterComponent implements OnInit {
         }
     }
 
+    teste(cep: string){
+
+        let address= {
+               logradouro: 'logradouro',
+               bairro: 'bairro',
+               cidade: 'cidade',
+            
+           };
+           this.formulario.get('address').setValue(address);
+
+    }
+
     patchAddress(dados) {
  
         let address= {

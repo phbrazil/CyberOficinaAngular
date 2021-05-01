@@ -48,28 +48,28 @@
       <div formGroupName="address">
         <div class="form-group">
         <label for="cep">CEP</label>
-        <input (change)="getCep($event.target.value)" type="text" formControlName="cep" id='cep' class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
+        <input (change)="cep($event.target.value)" type="text" formControlName="cep" id='cep' class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
         <div *ngIf="submitted && f.cep.errors" class="invalid-feedback">
           <div *ngIf="f.cep.errors.required">CEP necessário</div>
         </div>
       </div>
       <div class="form-group">
         <label for="logradouro">Logradouro</label>
-        <input formControlName="logradouro" name="logradouro" type="text" formControlName="cep" class="form-control" id='logradouro' [ngClass]="{ 'is-invalid': submitted && f.logradouro.errors }" />
+        <input formControlName="logradouro" name="logradouro" type="text" formControlName="logradouro" class="form-control" id='logradouro' [ngClass]="{ 'is-invalid': submitted && f.logradouro.errors }" />
         <div *ngIf="submitted && f.logradouro.errors" class="invalid-feedback">
           <div *ngIf="f.logradouro.errors.required">Logradouro necessário</div>
         </div>
       </div>
       <div class="form-group">
         <label for="bairro">Bairro</label>
-        <input type="text" formControlName="cep" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.bairro.errors }" />
+        <input type="text" formControlName="bairro" formControlName="bairro" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.bairro.errors }" />
         <div *ngIf="submitted && f.bairro.errors" class="invalid-feedback">
           <div *ngIf="f.bairro.errors.required">Bairro necessário</div>
         </div>
       </div>
       <div class="form-group">
         <label for="cidade">Cidade</label>
-        <input type="text" formControlName="cep" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cidade.errors }" />
+        <input type="text" formControlName="cidade" formControlName="cidade" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cidade.errors }" />
         <div *ngIf="submitted && f.cidade.errors" class="invalid-feedback">
           <div *ngIf="f.cidade.errors.required">Cidade necessária</div>
         </div>
