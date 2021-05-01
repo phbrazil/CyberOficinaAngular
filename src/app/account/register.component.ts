@@ -138,7 +138,7 @@ export class RegisterComponent implements OnInit {
 
             return;
         }
-        if(this.address.invalid){
+        if(this.formulario.get('address').invalid){
             
             return;
         }
