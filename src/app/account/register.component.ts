@@ -37,8 +37,8 @@ export class RegisterComponent implements OnInit {
             email: ['', Validators.required],
             cpfcnpj: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]],
+            cep: ['', Validators.required],
             address: this.formBuilder.group({
-                cep: ['', Validators.required],
                 logradouro: ['', Validators.required],
                 bairro: ['', Validators.required],
                 cidade: ['', Validators.required],     
@@ -80,15 +80,25 @@ export class RegisterComponent implements OnInit {
 
     teste(cep: string){
 
-        let address= {
-               logradouro: 'logradouro',
-               bairro: 'bairro',
-               cidade: 'cidade',
-            
-           };
-           this.formulario.get('address').setValue(address);
-
-    }
+        /* let address= {
+             firstName: "teste huheuehue",
+             address: {
+                logradouro: 'teste logradouro',
+                bairro: 'Bairro', 
+                cidade: 'Cidade',
+             }
+            };*/
+         let address = {
+             cep: "Rahul",
+             logradouro: "Dravid",
+             bairro: 'bairro',
+             cidade: 'hue'
+             
+         }
+     
+         this.formulario.get('address').patchValue(address);
+ 
+     }
 
     patchAddress(dados) {
  
