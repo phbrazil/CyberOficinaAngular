@@ -45,14 +45,14 @@
           <div *ngIf="f.password.errors.minlength">Senha deve conter ao menos 6 caractéres</div>
         </div>
       </div>
-      <div formGroupName="address">
         <div class="form-group">
         <label for="cep">CEP</label>
-        <input (change)="teste($event.target.value)" formControlName="cep" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
+        <input (change)="getCep($event.target.value)" formControlName="cep" type="text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
         <div *ngIf="submitted && f.cep.errors" class="invalid-feedback">
           <div *ngIf="f.cep.errors.required">CEP necessário</div>
         </div>
       </div>
+      <div formGroupName="address">
       <div class="form-group">
         <label for="logradouro">Logradouro</label>
         <input formControlName="logradouro" type="text" id='logradouro' class="form-control" [ngClass]="{ 'is-invalid': submitted && f.logradouro.errors }" />

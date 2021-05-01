@@ -102,20 +102,14 @@ export class RegisterComponent implements OnInit {
 
     patchAddress(dados) {
  
-        let address= {
-         firstName: "teste huheuehue",
-         address: {
+        let address = {
             logradouro: dados.dados.logradouro,
             bairro: dados.dados.bairro,
-            cidade: dados.dados.cidade,
-         }
-        };
-
-
+            cidade: dados.dados.cidade
+            
+        }
+    
         this.formulario.get('address').patchValue(address);
-
-        console.log(this.formulario.get('address').value);
-
     }
 
     onSubmit() {
