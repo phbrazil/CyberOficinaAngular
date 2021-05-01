@@ -8,6 +8,7 @@ import { AccountService, AlertService } from '@app/_services';
 export class RegisterComponent implements OnInit {
 
     formulario: FormGroup;
+    address: FormGroup;
     loading = false;
     submitted = false;
 
@@ -30,6 +31,14 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
         
+        this.address = this.formBuilder.group({
+            logradouro: ['', Validators.required],
+            bairro: ['', Validators.required],
+            cidade: ['', Validators.required],     
+            estado: ['', Validators.required],    
+            uf: ['', Validators.required],    
+        });
+
         this.formulario = this.formBuilder.group({
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
@@ -50,6 +59,7 @@ export class RegisterComponent implements OnInit {
 
     // convenience getter for easy access to form fields
     get f() { return this.formulario.controls; }
+    get a() { return this.address.controls; }
 
   
     getCep(cep: string): void {
@@ -91,8 +101,13 @@ export class RegisterComponent implements OnInit {
              uf: 'SP'
              
          }
+
+         let profile = {
+             firstName: 'Primeiro Nome'
+         }
      
          this.formulario.get('address').patchValue(address);
+         this.formulario.patchValue(profile);
  
      }
 
@@ -110,6 +125,9 @@ export class RegisterComponent implements OnInit {
     }
 
     onSubmit() {
+
+        console.log(this.formulario.value);
+
         this.submitted = true;
 
         // reset alerts on submit
@@ -117,6 +135,11 @@ export class RegisterComponent implements OnInit {
 
         // stop here if form is invalid
         if (this.formulario.invalid) {
+
+            return;
+        }
+        if(this.address.invalid){
+            
             return;
         }
 
