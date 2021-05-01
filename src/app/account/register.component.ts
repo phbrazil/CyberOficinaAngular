@@ -80,14 +80,6 @@ export class RegisterComponent implements OnInit {
 
     teste(cep: string){
 
-        /* let address= {
-             firstName: "teste huheuehue",
-             address: {
-                logradouro: 'teste logradouro',
-                bairro: 'Bairro', 
-                cidade: 'Cidade',
-             }
-            };*/
          let address = {
              cep: "Rahul",
              logradouro: "Dravid",
