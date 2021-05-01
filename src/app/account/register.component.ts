@@ -94,9 +94,9 @@ export class RegisterComponent implements OnInit {
 
          let address = {
              cep: cep,
-             logradouro: "Dravid",
-             bairro: 'bairro',
-             cidade: 'hue',
+             logradouro: "Rua HueHue",
+             bairro: 'Bairro',
+             cidade: 'Cidade huehue',
              estado: 'Estado',
              uf: 'SP'
              
