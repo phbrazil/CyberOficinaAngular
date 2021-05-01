@@ -42,6 +42,8 @@ export class RegisterComponent implements OnInit {
                 logradouro: ['', Validators.required],
                 bairro: ['', Validators.required],
                 cidade: ['', Validators.required],     
+                estado: ['', Validators.required],    
+                uf: ['', Validators.required],    
               })
         });
     }
@@ -81,10 +83,12 @@ export class RegisterComponent implements OnInit {
     teste(cep: string){
 
          let address = {
-             cep: "Rahul",
+             cep: cep,
              logradouro: "Dravid",
              bairro: 'bairro',
-             cidade: 'hue'
+             cidade: 'hue',
+             estado: 'Estado',
+             uf: 'SP'
              
          }
      
@@ -97,8 +101,9 @@ export class RegisterComponent implements OnInit {
         let address = {
             logradouro: dados.dados.logradouro,
             bairro: dados.dados.bairro,
-            cidade: dados.dados.cidade
-            
+            cidade: dados.dados.cidade,
+            estado: dados.dados.localidade,
+            uf: dados.dados.uf,
         }
     
         this.formulario.get('address').patchValue(address);
