@@ -1,6 +1,6 @@
-﻿import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService, AlertService } from '@app/_services';
 
@@ -90,27 +90,6 @@ export class RegisterComponent implements OnInit {
         }
     }
 
-    teste(cep: string){
-
-         let address = {
-             cep: cep,
-             logradouro: "Rua HueHue",
-             bairro: 'Bairro',
-             cidade: 'Cidade huehue',
-             estado: 'Estado',
-             uf: 'SP'
-             
-         }
-
-         let profile = {
-             firstName: 'Primeiro Nome'
-         }
-     
-         this.formulario.get('address').patchValue(address);
-         this.formulario.patchValue(profile);
- 
-     }
-
     patchAddress(dados) {
  
         let address = {
@@ -125,8 +104,6 @@ export class RegisterComponent implements OnInit {
     }
 
     onSubmit() {
-
-        console.log(this.formulario.value);
 
         this.submitted = true;
 
