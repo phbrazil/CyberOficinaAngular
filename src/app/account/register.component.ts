@@ -78,7 +78,14 @@ export class RegisterComponent implements OnInit {
         }
     }
 
+    testPatch(){
+
+        this.getCep('01311000');
+
+    }
     patchAddress(dados) {
+
+        console.log(dados.dados);
  
         let address= {
          firstName: "teste huheuehue",
@@ -92,7 +99,7 @@ export class RegisterComponent implements OnInit {
 
         this.formulario.get('address').patchValue(address);
 
-        console.log(this.formulario.get('address').value);
+        console.log(this.formulario.value);
 
     }
 
