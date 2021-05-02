@@ -52,6 +52,7 @@
             <div *ngIf="f.password.errors.minlength">Senha deve conter ao menos 6 caractéres</div>
           </div>
         </div>
+        <hr class='hr-dark'>
         <div class="form-group">
           <label for="cep">CEP</label>
           <input (change)="getCep($event.target.value)" formControlName="cep" type="number" class="form-control"
@@ -70,22 +71,38 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="bairro">Bairro</label>
-            <input type="text" formControlName="bairro" class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && a.bairro.errors }" />
-            <div *ngIf="submitted && a.bairro.errors" class="invalid-feedback">
-              <div *ngIf="a.bairro.errors.required">Bairro necessário</div>
+            <div class='row'>
+              <div class='col-md-4'>
+                <label for="numero">Número</label>
+                <input formControlName="logradouro" type="text" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && a.numero.errors }" />
+                <div *ngIf="submitted && a.numero.errors" class="invalid-feedback">
+                  <div *ngIf="a.numero.errors.required">Número necessário</div>
+                </div>
+              </div>
+              <div class='col-md-8'>
+                <label for="complemento">Complemento</label>
+                <input formControlName="complemento" type="text" class="form-control" />
+              </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="cidade">Cidade</label>
-            <input type="text" formControlName="cidade" class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && a.cidade.errors }" />
-            <div *ngIf="submitted && a.cidade.errors" class="invalid-feedback">
-              <div *ngIf="a.cidade.errors.required">Cidade necessária</div>
+              <label for="bairro">Bairro</label>
+              <input type="text" formControlName="bairro" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && a.bairro.errors }" />
+              <div *ngIf="submitted && a.bairro.errors" class="invalid-feedback">
+                <div *ngIf="a.bairro.errors.required">Bairro necessário</div>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
+            <div class="form-group">
+              <label for="cidade">Cidade</label>
+              <input type="text" formControlName="cidade" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && a.cidade.errors }" />
+              <div *ngIf="submitted && a.cidade.errors" class="invalid-feedback">
+                <div *ngIf="a.cidade.errors.required">Cidade necessária</div>
+              </div>
+            </div>
+            <div class="form-group">
               <div class='row'>
                 <div class='col-md-8'>
                   <label for="estado">Estado</label>
@@ -103,17 +120,17 @@
                     <div *ngIf="a.uf.errors.required">Estado necessária</div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="form-group">
-        <button [disabled]="loading" class="btn btn-primary">
-          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-          Registrar
-        </button>
-        <a routerLink="../login" class="btn btn-link">Cancelar</a>
-      </div>
+        <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Registrar
+          </button>
+          <a routerLink="../login" class="btn btn-link">Cancelar</a>
+        </div>
     </form>
   </div>
 </div>

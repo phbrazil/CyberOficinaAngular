@@ -49,6 +49,8 @@ export class RegisterComponent implements OnInit {
             cep: ['', Validators.required],
             address: this.formBuilder.group({
                 logradouro: ['', Validators.required],
+                numero: ['', Validators.required],
+                complemento: [''],
                 bairro: ['', Validators.required],
                 cidade: ['', Validators.required],     
                 estado: ['', Validators.required],    
@@ -97,6 +99,7 @@ export class RegisterComponent implements OnInit {
             bairro: dados.dados.bairro,
             cidade: dados.dados.cidade,
             estado: dados.dados.estado,
+            complemento: dados.dados.complemento,
             uf: dados.dados.uf,
         }
     
