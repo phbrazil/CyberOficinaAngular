@@ -8,6 +8,7 @@ import { AccountService, AlertService } from '@app/_services';
 export class RegisterComponent implements OnInit {
 
     formulario: FormGroup;
+    address: FormGroup;
     loading = false;
     submitted = false;
 
@@ -30,6 +31,14 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
         
+        this.address = this.formBuilder.group({
+            logradouro: ['', Validators.required],
+            bairro: ['', Validators.required],
+            cidade: ['', Validators.required],     
+            estado: ['', Validators.required],    
+            uf: ['', Validators.required],    
+        });
+
         this.formulario = this.formBuilder.group({
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
@@ -37,17 +46,20 @@ export class RegisterComponent implements OnInit {
             email: ['', Validators.required],
             cpfcnpj: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]],
+            cep: ['', Validators.required],
             address: this.formBuilder.group({
-                cep: ['', Validators.required],
                 logradouro: ['', Validators.required],
                 bairro: ['', Validators.required],
                 cidade: ['', Validators.required],     
+                estado: ['', Validators.required],    
+                uf: ['', Validators.required],    
               })
         });
     }
 
     // convenience getter for easy access to form fields
     get f() { return this.formulario.controls; }
+    get a() { return this.address.controls; }
 
   
     getCep(cep: string): void {
@@ -78,32 +90,44 @@ export class RegisterComponent implements OnInit {
         }
     }
 
-    testPatch(){
+    teste(cep: string){
 
-        this.getCep('01311000');
+         let address = {
+             cep: cep,
+             logradouro: "Rua HueHue",
+             bairro: 'Bairro',
+             cidade: 'Cidade huehue',
+             estado: 'Estado',
+             uf: 'SP'
+             
+         }
 
-    }
-    patchAddress(dados) {
-
-        console.log(dados.dados);
+         let profile = {
+             firstName: 'Primeiro Nome'
+         }
+     
+         this.formulario.get('address').patchValue(address);
+         this.formulario.patchValue(profile);
  
-        let address= {
-         firstName: "teste huheuehue",
-         address: {
+     }
+
+    patchAddress(dados) {
+ 
+        let address = {
             logradouro: dados.dados.logradouro,
             bairro: dados.dados.bairro,
             cidade: dados.dados.cidade,
-         }
-        };
-
-
+            estado: dados.dados.estado,
+            uf: dados.dados.uf,
+        }
+    
         this.formulario.get('address').patchValue(address);
-
-        console.log(this.formulario.value);
-
     }
 
     onSubmit() {
+
+        console.log(this.formulario.value);
+
         this.submitted = true;
 
         // reset alerts on submit
@@ -111,6 +135,11 @@ export class RegisterComponent implements OnInit {
 
         // stop here if form is invalid
         if (this.formulario.invalid) {
+
+            return;
+        }
+        if(this.formulario.get('address').invalid){
+            
             return;
         }
 

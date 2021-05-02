@@ -50,26 +50,107 @@ export class AccountService {
 
     cep(cep: string) {
 
-        cep = cep.replace(/\D/g,'');
+        cep = cep.replace(/\D/g, '');
 
-        if(cep!==''){
+        if (cep !== '') {
 
             const validaCep = /^[0-9]{8}$/;
 
-            if(validaCep.test(cep)){
+            if (validaCep.test(cep)) {
                 let url = `http://localhost:8443/cyberoficina/getCep/${cep}`;
                 return this.http.get<any>(url)
                     .pipe(map(dados => {
                         this.alertService.success('Cep válido', { keepAfterRouteChange: true });
+                        console.log(dados);
 
+                        switch (dados.dados.uf) {
+                            case 'RO':
+                                dados.dados.estado = 'Rondônia'
+                                break;
+                            case 'AC':
+                                dados.dados.estado = 'Acre'
+                                break;
+                            case 'AM':
+                                dados.dados.estado = 'Amazonas'
+                                break;
+                            case 'RR':
+                                dados.dados.estado = 'Roraima'
+                                break;
+                            case 'PA':
+                                dados.dados.estado = 'Pará'
+                                break;
+                            case 'AP':
+                                dados.dados.estado = 'Amapá'
+                                break;
+                            case 'TO':
+                                dados.dados.estado = 'Tocantins'
+                                break;
+                            case 'MA':
+                                dados.dados.estado = 'Maranhão'
+                                break;
+                            case 'PI':
+                                dados.dados.estado = 'Piauí'
+                                break;
+                            case 'CE':
+                                dados.dados.estado = 'Ceará'
+                                break;
+                            case 'RN':
+                                dados.dados.estado = 'Rio Grande do Norte'
+                                break;
+                            case 'PB':
+                                dados.dados.estado = 'Paraíba'
+                                break;
+                            case 'PE':
+                                dados.dados.estado = 'Pernambuco'
+                                break;
+                            case 'AL':
+                                dados.dados.estado = 'Alagoas'
+                                break;
+                            case 'SE':
+                                dados.dados.estado = 'Sergipe'
+                                break;
+                            case 'BA':
+                                dados.dados.estado = 'Bahia'
+                                break;
+                            case 'MG':
+                                dados.dados.estado = 'Minas Gerais'
+                                break;
+                            case 'ES':
+                                dados.dados.estado = 'Espírito Santo'
+                                break;
+                            case 'RJ':
+                                dados.dados.estado = 'Rio de Janeiro'
+                                break;
+                            case 'SP':
+                                dados.dados.estado = 'São Paulo'
+                                break;
+                            case 'PR':
+                                dados.dados.estado = 'Paraná'
+                                break;
+                            case 'RS':
+                                dados.dados.estado = 'Rio Grande do Sul'
+                                break;
+                            case 'MS':
+                                dados.dados.estado = 'Mato Grosso do Sul'
+                                break;
+                            case 'MT':
+                                dados.dados.estado = 'Mato Grosso'
+                                break;
+                            case 'GO':
+                                dados.dados.estado = 'Goiás'
+                                break;
+                            case 'DF':
+                                dados.dados.estado = 'Distrito Federal'
+                                break;
+                        }
                         return dados;
                     }));
-            }else{
+            } else {
                 this.alertService.error('Cep inválido', { keepAfterRouteChange: true });
 
             }
         }
- }
+    }
 
 
 
@@ -80,7 +161,7 @@ export class AccountService {
 
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
-         const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
+        const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
         //return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
         return this.http.post<User>(url, { username, password })
             .pipe(map(user => {
