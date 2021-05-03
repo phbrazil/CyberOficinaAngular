@@ -55,7 +55,9 @@ export class AccountService {
             const validaCep = /^[0-9]{8}$/;
 
             if (validaCep.test(cep)) {
-                let url = `http://localhost:8443/cyberoficina/getCep/${cep}`;
+                //let url = `http://localhost:8443/cyberoficina/getCep/${cep}`;
+                let url = `https://cyberoficina.herokuapp.com/cyberoficina/getCep/${cep}`;
+
                 return this.http.get<any>(url)
                     .pipe(map(dados => {
                         this.alertService.success('Cep válido', { keepAfterRouteChange: true });
@@ -159,8 +161,9 @@ export class AccountService {
 
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
-        const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
-        //return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
+        //const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
+        const url = 'https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signin';
+
         return this.http.post<User>(url, { username, password })
             .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -181,8 +184,11 @@ export class AccountService {
 
     register(user: User) {
         //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', user);
-        return this.http.post('http://localhost:8443/cyberoficina/api/auth/signup', user);
-        //return this.http.post(`${environment.apiUrl}/users/register`, user);
+        //return this.http.post('http://localhost:8443/cyberoficina/api/auth/signup', user);
+
+        return  this.http.post('https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signup', user);
+
+   
     }
 
     getAll() {
@@ -195,14 +201,9 @@ export class AccountService {
         }
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
 
-        const url = 'http://localhost:8443/cyberoficina/api/auth/users';
-        //const url = `${environment.apiUrl}/users`;
+        //const url = 'http://localhost:8443/cyberoficina/api/auth/users';
 
-        //let users = this.http.get(url);
-
-        //return users;
-
-        //return this.http.get<User[]>(`${environment.apiUrl}/users`);
+        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/users`
 
         return this.http.get<User[]>(url, header)
             .pipe(map(users => {
@@ -223,17 +224,19 @@ export class AccountService {
 
         //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
 
-        const url = `http://localhost:8443/cyberoficina/api/auth/user/${id}`;
+        //const url = `http://localhost:8443/cyberoficina/api/auth/user/${id}`;
 
-        //return this.http.get<User>(`${environment.apiUrl}/users/${id}`);
+        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/user/${id}`
+
 
         return this.http.get<User>(url);
     }
 
     update(id, params) {
 
-        const url = `http://localhost:8443/cyberoficina/api/auth/editUser/${id}`;
+        //const url = `http://localhost:8443/cyberoficina/api/auth/editUser/${id}`;
         //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUser/${id}`;
+        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/editUser/${id}`
 
         return this.http.put(url, params)
 
@@ -254,9 +257,9 @@ export class AccountService {
 
     delete(id: string) {
 
-        const url = `http://localhost:8443/cyberoficina/api/auth/deleteUser/${id}`;
+        //const url = `http://localhost:8443/cyberoficina/api/auth/deleteUser/${id}`;
         //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
-
+        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/deleteUser/${id}`
         return this.http.delete(url)
 
             // return this.http.delete(`${environment.apiUrl}/users/${id}`)
