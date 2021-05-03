@@ -74,7 +74,7 @@
             <div class='row'>
               <div class='col-md-4'>
                 <label for="numero">Número</label>
-                <input formControlName="logradouro" type="text" class="form-control"
+                <input formControlName="numero" type="text" class="form-control"
                   [ngClass]="{ 'is-invalid': submitted && a.numero.errors }" />
                 <div *ngIf="submitted && a.numero.errors" class="invalid-feedback">
                   <div *ngIf="a.numero.errors.required">Número necessário</div>
