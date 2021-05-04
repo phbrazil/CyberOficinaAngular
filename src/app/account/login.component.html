@@ -1,17 +1,39 @@
 ﻿<div class="card">
-    <h4 class="card-header">Login</h4>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="intro-content">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-left mt-2">
+                        <img src="assets/img/logo_home.png" style='width: 20%; height: 20%'
+                            class="img-responsive img-centered" alt="">
+                        <div class="brand-name mb-2 text-muted mt-4">
+                            <h2>Cyber Oficina</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="brand-name-subtext text-muted mt-4"><strong>Encontre um especialista sem sair de
+                                casa</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="card-body">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="username">Usuário/Email</label>
-                <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <input type="text" formControlName="username" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
                 <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
                     <div *ngIf="f.username.errors.required">Usuário ou Email necessário</div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
-                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <input type="password" formControlName="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                     <div *ngIf="f.password.errors.required">Senha necessária</div>
                 </div>
@@ -19,7 +41,7 @@
             <div class="form-group">
                 <button [disabled]="loading" class="btn btn-primary">
                     <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-                    Login
+                    Entrar
                 </button>
                 <a routerLink="../register" class="btn btn-link">Registrar</a>
             </div>
