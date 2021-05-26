@@ -154,14 +154,12 @@ export class AccountService {
 
 
 
-
-
-
     login(username, password) {
 
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
         //const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
+        
         const url = 'https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signin';
 
         return this.http.post<User>(url, { username, password })

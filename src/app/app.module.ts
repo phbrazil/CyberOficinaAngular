@@ -13,6 +13,8 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home';
+import { ComponentsModule } from './_components/components.module';
+import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
@@ -24,12 +26,14 @@ const maskConfig: Partial<IConfig> = {
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
+        ComponentsModule,
         NgxMaskModule.forRoot(maskConfig),
     ],
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
+        HomeComponent,
+        AdminLayoutComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
