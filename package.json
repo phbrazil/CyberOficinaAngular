@@ -1,6 +1,6 @@
 {
-  "name": "material-dashboard-angular",
-  "version": "2.5.0",
+  "name": "cyber-oficina-angular",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
