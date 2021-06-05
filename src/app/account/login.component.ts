@@ -58,7 +58,12 @@ export class LoginComponent implements OnInit {
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
-                    this.alertService.error(error);
+                    if(error.status== 401){
+                        this.alertService.error('Acesso Negado');
+                    }else{
+                        this.alertService.error(error.status);
+
+                    }
                     this.loading = false;
                 });
     }

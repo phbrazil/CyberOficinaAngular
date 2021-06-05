@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './_helpers';
+import { ComponentsModule } from './components/components.module';
 
 /*const routes: Routes =[
   {
