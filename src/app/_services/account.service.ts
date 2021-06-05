@@ -4,8 +4,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { User } from '@app/_models';
 import { AlertService } from './alert.service';
+import { User } from 'app/_models';
 
 @Injectable({ providedIn: 'root' })
 export class AccountService {

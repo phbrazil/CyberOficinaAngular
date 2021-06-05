@@ -1,9 +1,9 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
-import { AccountService } from '@app/_services';
 
 import { Injectable } from '@angular/core';
+import { AccountService } from 'app/_services';
 
 @Injectable()
 export class AuthService {
