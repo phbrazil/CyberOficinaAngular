@@ -167,8 +167,6 @@ export class DashboardComponent implements OnInit {
 
         this.pendingOrcs = x['totalElements'];
 
-        console.log(x)
-
       });
   }
 

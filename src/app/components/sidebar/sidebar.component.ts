@@ -27,6 +27,7 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
   user: User;
+  firstName = localStorage.getItem('firstName');
 
 
   constructor(private accountService: AccountService) { 
