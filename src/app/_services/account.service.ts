@@ -2,7 +2,7 @@
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 
 import { AlertService } from './alert.service';
 import { User } from 'app/_models';
@@ -159,7 +159,7 @@ export class AccountService {
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
         //const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
-        
+
         const url = 'https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signin';
 
         return this.http.post<User>(url, { username, password })
@@ -184,9 +184,9 @@ export class AccountService {
         //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', user);
         //return this.http.post('http://localhost:8443/cyberoficina/api/auth/signup', user);
 
-        return  this.http.post('https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signup', user);
+        return this.http.post('https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signup', user);
 
-   
+
     }
 
     getAll() {
@@ -270,5 +270,10 @@ export class AccountService {
             }));
     }
 
+    getPendingOrcs(idUser: String) {
+        const url = 'https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/16/0/10';
+
+        return this.http.get(url);
+    }
 
 }
