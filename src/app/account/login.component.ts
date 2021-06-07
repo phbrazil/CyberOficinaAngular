@@ -3,6 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService, AlertService } from 'app/_services';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ModalLoginComponent } from 'app/components/modal-login/modal-login.component';
+import { ModalService } from 'app/_services/modal-actions.service';
 
 @Component({
     selector: 'app-login',
@@ -21,8 +24,10 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private accountService: AccountService,
-        private alertService: AlertService
-    ) { }
+        private alertService: AlertService) { }
+
+
+      
 
     ngOnInit() {
         this.form = this.formBuilder.group({
@@ -70,4 +75,5 @@ export class LoginComponent implements OnInit {
                     this.loading = false;
                 });
     }
+    
 }

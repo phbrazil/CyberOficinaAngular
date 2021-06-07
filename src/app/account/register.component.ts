@@ -4,7 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService, AlertService } from 'app/_services';
 
-@Component({ templateUrl: 'register.component.html' })
+@Component({ templateUrl: 'register.component.html',
+selector: 'app-register',
+})
 export class RegisterComponent implements OnInit {
 
     formulario: FormGroup;

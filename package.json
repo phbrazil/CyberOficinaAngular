@@ -1,6 +1,6 @@
 {
   "name": "cyber-oficina-angular",
-  "version": "0.0.1",
+  "version": "2.5.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,6 @@
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && ng serve -o",
     "github": "ng build --prod --output-path docs --base-href /CyberOficinaAngular/"
-
   },
   "engines": {
     "node": "6.11.1",

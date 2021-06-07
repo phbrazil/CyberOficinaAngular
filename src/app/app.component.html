@@ -1,4 +1,16 @@
-<div class="app-container" >
+<div *ngIf="!user">
+    <app-navbar-login></app-navbar-login>
+</div>
+
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
     <app-alert></app-alert>
     <router-outlet></router-outlet>
 </div>
+
+<!--CHAMAR MODAL-->
+<!--button class="btn btn-sm btn-secondary" (click)="openModal('custom-modal-1', 'Field 1')">Abrir Modal</button>
+
+<jw-modal id="custom-modal-1">
+<h1>huhueheuehu</h1>
+<button class="btn btn-sm btn-secondary" (click)="closeModal('custom-modal-1');">Fechar</button>
+</jw-modal-->

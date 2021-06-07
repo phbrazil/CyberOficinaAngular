@@ -23,6 +23,13 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AlertComponent } from './components/alert';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { ModalLoginModule } from './components/modal-login/modal-login-module';
+import { LoginComponent } from './account/login.component';
+import { AccountModule } from './account/account.module';
+import { RegisterComponent } from './account/register.component';
+import { NavbarLoginComponent } from './components/navbar-login/navbar-login.component';
 
 @NgModule({
   imports: [
@@ -33,16 +40,22 @@ import { AlertComponent } from './components/alert';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    MatButtonModule,
+    MatDialogModule,
+    ModalLoginModule,
     AgmCoreModule.forRoot({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
+      apiKey: 'AIzaSyBo5g3bCuE-_XSzmz6_7RC-R8d9YgkHILA'
     })
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AlertComponent
+    AlertComponent,
+    RegisterComponent,
+    NavbarLoginComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

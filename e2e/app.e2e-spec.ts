@@ -1,6 +1,6 @@
 import { MaterialDashboardAngularPage } from './app.po';
 
-describe('material-dashboard-angular App', () => {
+describe('cyber-oficina-angular App', () => {
   let page: MaterialDashboardAngularPage;
 
   beforeEach(() => {

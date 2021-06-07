@@ -11,6 +11,7 @@ import { first } from 'rxjs/operators';
 export class DashboardComponent implements OnInit {
 
   pendingOrcs;
+  isLogged = false;
 
 
   constructor(private accountService: AccountService) {
@@ -73,11 +74,17 @@ export class DashboardComponent implements OnInit {
 
     seq2 = 0;
   };
+
+  ngOnchanges(){
+
+    console.log('on changes')
+
+  }
   ngOnInit() {
 
     this.getPendingOrcs('61');
 
-
+    this.isLogged = true;
     /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
 
     const dataDailySalesChart: any = {

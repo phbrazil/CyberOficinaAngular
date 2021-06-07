@@ -4,9 +4,9 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './_helpers';
-import { ComponentsModule } from './components/components.module';
+import { RegisterComponent } from './account/register.component';
+import { AboutComponent } from './components/about/about.component';
 
 /*const routes: Routes =[
   {
@@ -28,7 +28,8 @@ const accountModule = () => import('./account/account.module').then(x => x.Accou
 const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
 
 
-const routes: Routes = [
+const routes: Routes = [  
+  {path: 'about', component: AboutComponent},
   { path: '',     redirectTo: 'dashboard',
   pathMatch: 'full',
   canActivate: [AuthGuard] },
@@ -43,6 +44,7 @@ const routes: Routes = [
   },
   { path: 'users', loadChildren: usersModule, canActivate: [AuthGuard] },
   { path: 'account', loadChildren: accountModule },
+
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
