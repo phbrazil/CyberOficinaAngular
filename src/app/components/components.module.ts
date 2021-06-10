@@ -9,6 +9,7 @@ import { AlertComponent } from './alert/alert.component';
 import { ModalLoginComponent } from './modal-login/modal-login.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarLoginComponent } from './navbar-login/navbar-login.component';
+import { NavDrawerComponent } from './nav-drawer/nav-drawer.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { NavbarLoginComponent } from './navbar-login/navbar-login.component';
     NavbarComponent,
     SidebarComponent,
     AboutComponent,
+    NavDrawerComponent,
     //NavbarLoginComponent,
     //ModalLoginComponent,
     //AlertComponent
@@ -27,7 +29,8 @@ import { NavbarLoginComponent } from './navbar-login/navbar-login.component';
   exports: [
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    NavDrawerComponent
   ]
 })
 export class ComponentsModule { }

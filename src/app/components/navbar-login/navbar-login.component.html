@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="assets/img/logo_home.png" alt="logo" style="width: 50px; height: 40px" />
             Cyber Oficina</a>
@@ -6,20 +6,31 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <!--li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li-->
                 <li class="nav-item active">
                     <a class="nav-link" routerLink="/about" routerLinkActive="active">Conheça</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="btn btn-sm btn-success" routerLink="/login" routerLinkActive="active">Acessar</a>
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav-->
+    <header>
+        <nav class="navbar navbar-expand-md" id="navbar">
+          <div class="container">
+            <div class="nav-toggler" [class.drawer-open]="isDrawerOpen" id="nav-toggler" (click)="toggleNavDrawer(!isDrawerOpen)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a class="navbar-brand override" routerLink="/">
+                <img src="assets/img/logo_home.png" alt="logo" style="width: 50px; height: 40px" />
+                Cyber Oficina</a>
+            <nav-drawer [isDrawerOpen]="isDrawerOpen" (drawerToggleEmitter)="toggleNavDrawer($event)"></nav-drawer>
+          </div>
+        </nav>
+      </header>
 
