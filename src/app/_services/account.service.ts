@@ -176,7 +176,9 @@ export class AccountService {
         // remove user from local storage and set current user to null
         localStorage.removeItem('user');
         localStorage.removeItem('token');
-        localStorage.removeItem('firstName');
+        localStorage.removeItem('lastName');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('email');
         this.userSubject.next(null);
         this.router.navigate(['/account/login']);
     }

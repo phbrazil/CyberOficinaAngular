@@ -60,7 +60,6 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    console.log(data)
                     //SALVAR DADOS DO USUARIO LOCALMENTE
                     localStorage.setItem('firstName', data.firstName);
                     localStorage.setItem('lastName', data.lastName);
