@@ -24,7 +24,7 @@
         </form-->
         <ul class="nav navbar-nav nav-mobile-menu">
             <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
+                <a class="nav-link" routerLink="/newOrc">
                     <i class="material-icons">description</i>
                     <p>
                         <span class="d-lg-none d-md-block">Novo Orçamento</span>
@@ -32,10 +32,18 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
+                <a class="nav-link" routerLink="/dashboard">
                     <i class="material-icons">dashboard</i>
                     <p>
                         <span class="d-lg-none d-md-block">Estatísticas</span>
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/user-profile">
+                    <i class="material-icons">person</i>
+                    <p>
+                        <span class="d-lg-none d-md-block">Perfil</span>
                     </p>
                 </a>
             </li>
@@ -58,7 +66,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" (click)="logout()">
-                    <i class="material-icons">person</i>
+                    <i class="material-icons">logout</i>
                     <p>
                         <span class="d-lg-none d-md-block">Sair</span>
                     </p>
