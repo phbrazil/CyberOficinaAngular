@@ -64,7 +64,7 @@ export class AddEditComponent implements OnInit {
                     this.f.firstName.setValue(x.firstName);
                     this.f.lastName.setValue(x.lastName);
                     this.f.username.setValue(x.username);
-                    this.f.email.setValue(x.email);
+                    this.f.email.setValue(x.emails);
                     this.f.cpfcnpj.setValue(x.cpfcnpj);
 
                 });

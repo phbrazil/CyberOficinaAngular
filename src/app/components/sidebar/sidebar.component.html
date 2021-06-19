@@ -11,7 +11,7 @@
 </div>
 <div class="sidebar-wrapper">
     <div *ngIf="isMobileMenu()">
-        <form class="navbar-form">
+        <!--form class="navbar-form">
             <span class="bmd-form-group">
                 <div class="input-group no-border">
                     <input type="text" value="" class="form-control" placeholder="Search...">
@@ -21,13 +21,21 @@
                     </button>
                 </div>
             </span>
-        </form>
+        </form-->
         <ul class="nav navbar-nav nav-mobile-menu">
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+                    <i class="material-icons">description</i>
+                    <p>
+                        <span class="d-lg-none d-md-block">Novo Orçamento</span>
+                    </p>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
                     <i class="material-icons">dashboard</i>
                     <p>
-                        <span class="d-lg-none d-md-block">Stats</span>
+                        <span class="d-lg-none d-md-block">Estatísticas</span>
                     </p>
                 </a>
             </li>
@@ -37,7 +45,7 @@
                     <i class="material-icons">notifications</i>
                     <span class="notification">56</span>
                     <p>
-                        <span class="d-lg-none d-md-block">Some Actions</span>
+                        <span class="d-lg-none d-md-block">Notificações</span>
                     </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -50,7 +58,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" (click)="logout()">
-                    <em class="material-icons">person</em>
+                    <i class="material-icons">person</i>
                     <p>
                         <span class="d-lg-none d-md-block">Sair</span>
                     </p>
@@ -58,12 +66,14 @@
             </li>
         </ul>
     </div>
-    <ul class="nav">
-        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
-            <a class="nav-link" [routerLink]="[menuItem.path]">
-                <i class="material-icons">{{menuItem.icon}}</i>
-                <p>{{menuItem.title}}</p>
-            </a>
-        </li>
-    </ul>
+    <div *ngIf="!isMobileMenu()">
+        <ul class="nav">
+            <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+                <a class="nav-link" [routerLink]="[menuItem.path]">
+                    <i class="material-icons">{{menuItem.icon}}</i>
+                    <p>{{menuItem.title}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
