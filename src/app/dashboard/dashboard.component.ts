@@ -13,6 +13,8 @@ export class DashboardComponent implements OnInit {
   pendingOrcs;
   isLogged = false;
 
+  user = JSON.parse(localStorage.getItem('user'));
+
 
   constructor(private accountService: AccountService) {
 
@@ -81,8 +83,10 @@ export class DashboardComponent implements OnInit {
 
   }
   ngOnInit() {
+      
 
-    this.getPendingOrcs('61');
+    this.getPendingOrcs(this.user.id);
+    this.listOrcs(this.user.id);
 
     this.isLogged = true;
     /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
@@ -166,13 +170,31 @@ export class DashboardComponent implements OnInit {
     this.startAnimationForBarChart(websiteViewsChart);
   }
 
-  //GET PENDING ORCS
+  //GET PENDING ORCS QTD
   getPendingOrcs(idUser: string) {
     this.accountService.getPendingOrcs(idUser)
       .pipe(first())
       .subscribe(x => {
 
         this.pendingOrcs = x['totalElements'];
+
+      });
+  }
+
+   //LIST PENDING ORCS
+   listOrcs(idUser: string) {
+
+    this.accountService.getPendingOrcs(idUser)
+      .pipe(first())
+      .subscribe(x => {
+
+        let orcamentos = [];
+
+        orcamentos = x['orcamentos'];
+
+        orcamentos.forEach(orc => {
+          orc.marca;
+        });
 
       });
   }

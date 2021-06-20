@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'app/_models';
 import { AccountService } from 'app/_services';
+import { first } from 'rxjs/operators';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -27,8 +28,15 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
-  user: User;
-  firstName = localStorage.getItem('firstName');
+  //user: User;
+  
+  user = JSON.parse(localStorage.getItem('user'));
+  nome = this.user.nome;
+
+
+   //notification
+   orcamentos = [];
+   total = 0;
 
 
   constructor(private accountService: AccountService) {
@@ -36,6 +44,9 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.listOrcs(this.user.id);
+
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
   isMobileMenu() {
@@ -46,8 +57,24 @@ export class SidebarComponent implements OnInit {
   };
 
   logout() {
-    console.log('to aqui')
     this.accountService.logout();
 
+  }
+
+  //LIST PENDING ORCS
+  listOrcs(idUser: string) {
+    this.accountService.getPendingOrcs(idUser)
+      .pipe(first())
+      .subscribe(x => {
+
+        this.orcamentos = x['orcamentos'];
+        this.total = x['totalElements'];
+
+        this.orcamentos.forEach(orcamento => {
+          console.log(orcamento.veiculo)
+          
+        });
+
+      });
   }
 }

@@ -24,11 +24,11 @@
         <div class="card-body">
             <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="form-group">
-                    <label for="username">Usuário/Email</label>
+                    <label for="username">Email</label>
                     <input type="text" formControlName="username" class="form-control"
                         [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
                     <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                        <div *ngIf="f.username.errors.required">Usuário ou Email necessário</div>
+                        <div *ngIf="f.username.errors.required">Email necessário</div>
                     </div>
                 </div>
                 <div class="form-group">

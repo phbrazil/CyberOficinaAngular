@@ -4,6 +4,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 import { Router } from '@angular/router';
 import { AccountService } from 'app/_services';
 import { User } from 'app/_models';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +17,13 @@ export class NavbarComponent implements OnInit {
       mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
-    user: User;
+    //user: User;
+    user = JSON.parse(localStorage.getItem('user'));
+
+    //notification
+    orcamentos = [];
+    total = 0;
+
 
     constructor(location: Location,  private element: ElementRef, 
         private router: Router, private accountService: AccountService) {
@@ -27,6 +34,10 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit(){
+        //NOTIFICATION
+
+        this.listOrcs(this.user.id)
+
       this.listTitles = ROUTES.filter(listTitle => listTitle);
       const navbar: HTMLElement = this.element.nativeElement;
       this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
@@ -133,4 +144,16 @@ export class NavbarComponent implements OnInit {
     logout() {
         this.accountService.logout();
     }
+
+       //LIST PENDING ORCS
+   listOrcs(idUser: string) {
+    this.accountService.getPendingOrcs(idUser)
+      .pipe(first())
+      .subscribe(x => {
+
+        this.orcamentos = x['orcamentos'];
+        this.total = x['totalElements'];
+        
+      });
+  }
 }

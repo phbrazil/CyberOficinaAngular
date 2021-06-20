@@ -1,12 +1,11 @@
 ﻿export class User {
     id: string;
     idEnd: string;
-    username: string;
+    nome: string;
     password: string;
-    firstName: string;
-    lastName: string;
-    emails: string;
-    cpfcnpj: string;
+    email: string;
+    cpf: string;
     token: string;
-    roles: Array<string>
+    cep: String;
+    //roles: Array<string>
 }
