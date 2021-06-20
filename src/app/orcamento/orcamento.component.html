@@ -7,13 +7,13 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-4">
-                            <label for="marca">Marca</label>
-                            <input class="form-control" list="marcas" name="marcas">
+                            <label for="marca">Fabricante (Ex.: Nissan)</label>
+                            <input (change)="checkVeiculo($event.target.value)" formControlName="marca" placeholder="Digite" class="form-control" list="marcas">
                             <datalist id="marcas">
                                 <option *ngFor="let marca of marcas">{{marca.nome}} </option>
                             </datalist>
                         </div>
-                        <div class="col-md-4">
+                        <div *ngIf="veiculo" class="col-md-4">
                             <label for="veiculo">Veículo</label>
                             <input class="form-control" list="veiculos" name="veiculos">
                             <datalist id="veiculos">

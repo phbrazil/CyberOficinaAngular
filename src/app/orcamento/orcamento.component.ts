@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AlertService } from 'app/_services';
 
 @Component({
   selector: 'app-orcamento',
@@ -13,30 +14,31 @@ export class OrcamentoComponent implements OnInit {
   orcamento: FormGroup;
   loading = false;
   submitted = false;
+  veiculo = false;
 
   marcas = [
     {
-    id: 1,
-    nome: 'Nissan'
-  },
-  {
-    id: 2,
-    nome: 'Renault'
-  },
-]
+      id: 1,
+      nome: 'Nissan'
+    },
+    {
+      id: 2,
+      nome: 'Renault'
+    },
+  ]
 
-veiculos = [
-  {
-  id: 1,
-  nome: '350Z'
-},
-{
-  id: 2,
-  nome: 'Supra'
-},
-]
+  veiculos = [
+    {
+      id: 1,
+      nome: '350Z'
+    },
+    {
+      id: 2,
+      nome: 'Supra'
+    },
+  ]
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private alertService: AlertService) { }
 
   ngOnInit() {
 
@@ -47,6 +49,25 @@ veiculos = [
       //estado: ['', Validators.required],    
       //uf: ['', Validators.required],    
     });
+
+  }
+
+  checkVeiculo(veiculo: String) {
+
+    this.veiculo = false;
+
+    this.marcas.forEach(element => {
+
+
+      if (element.nome == veiculo) {
+        this.veiculo = true;
+      }
+
+    });
+
+    if (this.veiculo == false) {
+      this.alertService.error('Selecione o Fabricante do veículo');
+    }
 
   }
 
