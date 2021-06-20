@@ -70,11 +70,6 @@ export class SidebarComponent implements OnInit {
         this.orcamentos = x['orcamentos'];
         this.total = x['totalElements'];
 
-        this.orcamentos.forEach(orcamento => {
-          console.log(orcamento.veiculo)
-          
-        });
-
       });
   }
 }
