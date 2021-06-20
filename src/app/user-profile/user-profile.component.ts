@@ -17,12 +17,17 @@ export class UserProfileComponent implements OnInit {
   nome
   email
   rua
+  numero
+  complemento
+  bairro
   cidade
-  estado
+  uf
   pais
   cep
   empresa
-  cpf;
+  cpf
+  celular
+  telefone
 
   //SE FOR ESPECIALISTA OU CLIENTE
   spec = true;
@@ -42,19 +47,21 @@ export class UserProfileComponent implements OnInit {
                   this.cep = data.cep;
                   this.nome = data.nome;
                   this.email = data.email;            
-                  this.cidade = this.user.cidade;
-                  this.estado = this.user.estado;
                   this.pais = 'Brasil';
-                  this.cep = this.user.cep;
-                  this.rua = this.user.rua;
+                  this.cep = data.cep;
+                  this.rua = data.rua;
+                  this.numero = data.numero;
+                  this.complemento = data.complemento;
+                  this.bairro = data.bairro;
+                  this.cidade = data.cidade;
+                  this.uf = data.uf;
                   this.empresa = '9ember';
+                  this.celular= data.celular;
+                  this.telefone= data.telefone;
                 },
                 error => {
                   this.alertService.error(`Erro ${error.status}, favor tentar novamente mais tarde`);
                 });
-
-
-
 
   }
 

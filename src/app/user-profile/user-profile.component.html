@@ -1,87 +1,118 @@
 <div class="main-content">
   <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-8">
-              <div class="card">
-                  <div class="card-header card-header-info">
-                      <h4 class="card-title">Editar Perfil</h4>
-                      <p class="card-category">Complete seu perfil</p>
-                  </div>
-                  <div class="card-body">
-                      <form>
-                          <div class="row">
-                              <div class="col-md-3">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="{{empresa}}" disabled>
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-4">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="{{nome}}" disabled>
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-5">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="{{email}}" disabled>
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-3">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="{{cpf}}" disabled>
-                                </mat-form-field>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-4">
-                              <mat-form-field class="example-full-width">
-                                <input matInput value="{{cep}}" placeholder="CEP" type="text">
-                              </mat-form-field>
-                            </div>
-                              <div class="col-md-8">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput value="{{rua}}" placeholder="Rua" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-8">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput value="{{cidade}}" placeholder="Cidade" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-4">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput value="{{pais}}" placeholder="País" type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                          <div *ngIf="spec" class="row">
-                              <div class="col-md-12">
-                                <label>Sobre</label>
-                                <mat-form-field class="example-full-width">
-                                   <textarea matInput placeholder="Co-Fundador e CEO da Cyber Oficina"></textarea>
-                                 </mat-form-field>
-                              </div>
-                          </div>
-                          <button mat-raised-button type="submit" class="btn btn-info pull-right">Atualizar Perfil</button>
-                          <div class="clearfix"></div>
-                      </form>
-                  </div>
-              </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-info">
+            <h4 class="card-title">Editar Perfil</h4>
+            <p class="card-category">Complete seu perfil</p>
           </div>
-          <div class="col-md-4">
-              <div class="card card-profile">
-                  <div class="card-avatar">
-                      <a href="javascript:void(0)">
-                          <img class="img" src="./assets/img/faces/marc.jpeg" />
-                      </a>
-                  </div>
-                  <div class="card-body">
-                      <h6 class="card-category text-gray">CEO / Co-Fundador</h6>
-                      <h4 class="card-title">{{nome}}</h4>
-                  </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="{{empresa}}" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="{{nome}}" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-5">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="{{email}}" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="{{cpf}}" disabled>
+                  </mat-form-field>
+                </div>
               </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{cep}}" placeholder="CEP" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{rua}}" placeholder="Rua" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{numero}}" placeholder="Número" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{complemento}}" placeholder="Complemento" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{bairro}}" placeholder="Bairro" type="text">
+                  </mat-form-field>
+                </div>
+
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{cidade}}" placeholder="Cidade" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{uf}}" placeholder="Estado" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{pais}}" placeholder="País" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{celular}}" placeholder="Celular" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput value="{{telefone}}" placeholder="Telefone" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div *ngIf="spec" class="row">
+                <div class="col-md-12">
+                  <label>Sobre</label>
+                  <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Co-Fundador e CEO da Cyber Oficina"></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button mat-raised-button type="submit" class="btn btn-info pull-right">Atualizar Perfil</button>
+              <div class="clearfix"></div>
+            </form>
           </div>
+        </div>
       </div>
+      <div class="col-md-4">
+        <div class="card card-profile">
+          <div class="card-avatar">
+            <a href="javascript:void(0)">
+              <img class="img" src="./assets/img/faces/marc.jpeg" />
+            </a>
+          </div>
+          <div class="card-body">
+            <h6 class="card-category text-gray">CEO / Co-Fundador</h6>
+            <h4 class="card-title">{{nome}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

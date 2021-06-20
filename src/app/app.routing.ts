@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
-import { BrowserModule  } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthGuard } from './_helpers';
 import { RegisterComponent } from './account/register.component';
 import { AboutComponent } from './components/about/about.component';
+import { OrcamentoComponent } from './orcamento/orcamento.component';
 
 /*const routes: Routes =[
   {
@@ -28,11 +29,15 @@ const accountModule = () => import('./account/account.module').then(x => x.Accou
 const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
 
 
-const routes: Routes = [  
-  {path: 'about', component: AboutComponent},
-  { path: '',     redirectTo: 'dashboard',
-  pathMatch: 'full',
-  canActivate: [AuthGuard] },
+const routes: Routes = [
+  //NOVAS ROTAS EXTERNAS DO SITE DEVEM SER INCLUIDAS AQUI
+
+  { path: 'about', component: AboutComponent },
+  {
+    path: '', redirectTo: 'dashboard',
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
+  },
   {
     path: '',
     component: AdminLayoutComponent,
@@ -53,8 +58,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes,{
-       useHash: true
+    RouterModule.forRoot(routes, {
+      useHash: true
     })
   ],
   exports: [
