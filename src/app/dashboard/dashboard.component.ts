@@ -192,10 +192,6 @@ export class DashboardComponent implements OnInit {
 
         orcamentos = x['orcamentos'];
 
-        orcamentos.forEach(orc => {
-          orc.marca;
-        });
-
       });
   }
 

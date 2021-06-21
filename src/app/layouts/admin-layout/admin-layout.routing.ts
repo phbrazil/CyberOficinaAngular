@@ -9,6 +9,7 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { OrcamentoComponent } from 'app/orcamento/orcamento.component';
+import { MeusOrcamentosComponent } from 'app/meus-orcamentos/meus-orcamentos.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -63,5 +64,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications', component: NotificationsComponent },
     { path: 'upgrade', component: UpgradeComponent },
     { path: 'orcamento', component: OrcamentoComponent },
+    { path: 'meus-orcamentos', component: MeusOrcamentosComponent },
 
 ];

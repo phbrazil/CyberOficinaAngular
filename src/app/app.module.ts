@@ -17,6 +17,7 @@ import { ModalLoginModule } from './components/modal-login/modal-login-module';
 import { RegisterComponent } from './account/register.component';
 import { NavbarLoginComponent } from './components/navbar-login/navbar-login.component';
 import { OrcamentoComponent } from './orcamento/orcamento.component';
+import { MeusOrcamentosComponent } from './meus-orcamentos/meus-orcamentos.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { OrcamentoComponent } from './orcamento/orcamento.component';
     AlertComponent,
     RegisterComponent,
     NavbarLoginComponent,
+    MeusOrcamentosComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
