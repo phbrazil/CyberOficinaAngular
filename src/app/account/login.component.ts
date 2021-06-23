@@ -3,9 +3,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService, AlertService } from 'app/_services';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { ModalLoginComponent } from 'app/components/modal-login/modal-login.component';
-import { ModalService } from 'app/_services/modal-actions.service';
 
 @Component({
     selector: 'app-login',
