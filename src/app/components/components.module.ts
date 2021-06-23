@@ -10,6 +10,7 @@ import { ModalLoginComponent } from './modal-login/modal-login.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarLoginComponent } from './navbar-login/navbar-login.component';
 import { NavDrawerComponent } from './nav-drawer/nav-drawer.component';
+import { ResetPasswordComponent } from 'app/account/reset-password/reset-password.component';
 
 @NgModule({
   imports: [

@@ -312,4 +312,19 @@ export class AccountService {
         return this.http.get(url, header);
     }
 
+    resetPassword(email) {
+
+         let body = {
+            "dados": {
+                "email": email
+            }
+        }
+
+        return this.http.post('https://cyberoficina.herokuapp.com/cyberoficina/resetPassword', body);
+        //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', body);
+        //return this.http.post('http://localhost:8080/cyberoficina/resetPassword', body);
+
+
+    }
+
 }

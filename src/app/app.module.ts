@@ -18,6 +18,7 @@ import { RegisterComponent } from './account/register.component';
 import { NavbarLoginComponent } from './components/navbar-login/navbar-login.component';
 import { OrcamentoComponent } from './orcamento/orcamento.component';
 import { MeusOrcamentosComponent } from './meus-orcamentos/meus-orcamentos.component';
+import { ResetPasswordComponent } from './account/reset-password/reset-password.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { MeusOrcamentosComponent } from './meus-orcamentos/meus-orcamentos.compo
     RegisterComponent,
     NavbarLoginComponent,
     MeusOrcamentosComponent,
+    ResetPasswordComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -8,6 +8,7 @@ import { AuthGuard } from './_helpers';
 import { RegisterComponent } from './account/register.component';
 import { AboutComponent } from './components/about/about.component';
 import { OrcamentoComponent } from './orcamento/orcamento.component';
+import { ResetPasswordComponent } from './account/reset-password/reset-password.component';
 
 /*const routes: Routes =[
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
   //NOVAS ROTAS EXTERNAS DO SITE DEVEM SER INCLUIDAS AQUI
 
   { path: 'about', component: AboutComponent },
+  { path: 'reset-password', component: ResetPasswordComponent },
   {
     path: '', redirectTo: 'dashboard',
     pathMatch: 'full',
