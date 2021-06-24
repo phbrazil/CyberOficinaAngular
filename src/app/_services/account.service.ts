@@ -241,9 +241,9 @@ export class AccountService {
 
     update(id, params) {
 
-        //const url = `http://localhost:8080/cyberoficina/api/auth/editUser/${id}`;
-        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUser/${id}`;
-        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/editUser/${id}`
+        //const url = `http://localhost:8080/cyberoficina/api/auth/editUsuario/${id}`;
+        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUsuario/${id}`;
+        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/editUsuario/${id}`
 
         return this.http.put(url, params)
 

@@ -191,10 +191,11 @@ export class UserProfileComponent implements OnInit {
       .subscribe(
         data => {
           this.alertService.success('Dados atualizados com sucesso', { keepAfterRouteChange: true });
+          this.ngOnInit();
           //this.router.navigate(['../login'], { relativeTo: this.route });
         },
         error => {
-          this.alertService.error(error);
+          this.alertService.error("Occorreu um erro, tente novamente mais tarde: Status ", error.status);
           this.isLoading = false;
         });
   }
