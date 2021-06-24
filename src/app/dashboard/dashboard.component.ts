@@ -83,8 +83,7 @@ export class DashboardComponent implements OnInit {
 
   }
   ngOnInit() {
-      
-
+    
     this.getPendingOrcs(this.user.id);
     this.listOrcs(this.user.id);
 

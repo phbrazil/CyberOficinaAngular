@@ -12,6 +12,7 @@ export class UserProfileComponent implements OnInit {
 
   user = JSON.parse(localStorage.getItem('user'));
 
+  isLoading = false;
 
   //DADOS SENSIVEIS
   nome
@@ -39,6 +40,8 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
 
+    this.isLoading = true;
+
     this.accountService.getById(this.user.id)
             .pipe(first())
             .subscribe(
@@ -58,8 +61,10 @@ export class UserProfileComponent implements OnInit {
                   this.empresa = '9ember';
                   this.celular= data.celular;
                   this.telefone= data.telefone;
+                  this.isLoading = false;
                 },
                 error => {
+                  this.isLoading = false;
                   this.alertService.error(`Erro ${error.status}, favor tentar novamente mais tarde`);
                 });
 

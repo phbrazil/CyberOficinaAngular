@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbmF2YmFyLWxvZ2luL25hdmJhci1sb2dpbi5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".navbar-shadow {\n\tbox-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);\n}\n\n.nav-toggler {\n\tposition: absolute;\n\tdisplay: block;\n\tmargin-left: 1rem;\n\tleft: 0;\n\twidth: 25px;\n\theight: 40px;\n\ttransition: 0.3s ease;\n}\n\n.nav-toggler span {\n\tposition: absolute;\n\tdisplay: block;\n\twidth: 100%;\n\tleft: 0;\n\theight: 3px;\n\tbackground-color: black;\n\ttransition: 0.3s ease;\n\ttransform-origin: center;\n}\n\n.nav-toggler span:nth-child(1) {\n\ttop:26%;\n}\n\n.nav-toggler span:nth-child(2) {\n\ttop: 50%;\n\ttransform: translateY(-50%);\n}\n\n.nav-toggler span:nth-child(3) {\n\ttop: 50%;\n\ttransform: translateY(-50%);\n}\n\n.nav-toggler span:nth-child(4) {\n\tbottom: 26%;\n}\n\n.nav-toggler.drawer-open span:nth-child(1) {\n\ttop:50%;\n\tleft: 50%;\n\twidth: 0%;\n\topacity: 0;\n}\n\n.nav-toggler.drawer-open span:nth-child(2) {\n\ttop: 50%;\n\ttransform: translateY(-50%) rotate(-45deg);\n}\n\n.nav-toggler.drawer-open span:nth-child(3) {\n\ttop: 50%;\n\ttransform: translateY(-50%) rotate(45deg);\n}\n\n.nav-toggler.drawer-open span:nth-child(4) {\n\tbottom:50%;\n\tleft: 50%;\n\twidth: 0%;\n\topacity: 0;\n}\n\n.navbar-brand.override {\n\tposition: relative;\n\tdisplay: block;\n\tmargin-left: auto;\n\tmargin-right: auto;\n\tfont-weight: bold;\n\tcolor: black;\n}\n\n@media screen and (min-width: 48rem) {\n\n\t.nav-toggler,\n\t.nav-toggler.open {\n\t\tdisplay: none;\n\t}\n\n\t.navbar-brand.override {\n\t\tmargin: 0 1rem 0 0;\n\t}\n\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9uYXZiYXItbG9naW4vbmF2YmFyLWxvZ2luLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQywyQ0FBMkM7QUFDNUM7O0FBRUE7Q0FDQyxrQkFBa0I7Q0FDbEIsY0FBYztDQUNkLGlCQUFpQjtDQUNqQixPQUFPO0NBQ1AsV0FBVztDQUNYLFlBQVk7Q0FDWixxQkFBcUI7QUFDdEI7O0FBRUE7Q0FDQyxrQkFBa0I7Q0FDbEIsY0FBYztDQUNkLFdBQVc7Q0FDWCxPQUFPO0NBQ1AsV0FBVztDQUNYLHVCQUF1QjtDQUN2QixxQkFBcUI7Q0FDckIsd0JBQXdCO0FBQ3pCOztBQUVBO0NBQ0MsT0FBTztBQUNSOztBQUVBO0NBQ0MsUUFBUTtDQUNSLDJCQUEyQjtBQUM1Qjs7QUFFQTtDQUNDLFFBQVE7Q0FDUiwyQkFBMkI7QUFDNUI7O0FBRUE7Q0FDQyxXQUFXO0FBQ1o7O0FBRUE7Q0FDQyxPQUFPO0NBQ1AsU0FBUztDQUNULFNBQVM7Q0FDVCxVQUFVO0FBQ1g7O0FBRUE7Q0FDQyxRQUFRO0NBQ1IsMENBQTBDO0FBQzNDOztBQUVBO0NBQ0MsUUFBUTtDQUNSLHlDQUF5QztBQUMxQzs7QUFFQTtDQUNDLFVBQVU7Q0FDVixTQUFTO0NBQ1QsU0FBUztDQUNULFVBQVU7QUFDWDs7QUFFQTtDQUNDLGtCQUFrQjtDQUNsQixjQUFjO0NBQ2QsaUJBQWlCO0NBQ2pCLGtCQUFrQjtDQUNsQixpQkFBaUI7Q0FDakIsWUFBWTtBQUNiOztBQUVBOztDQUVDOztFQUVDLGFBQWE7Q0FDZDs7Q0FFQTtFQUNDLGtCQUFrQjtDQUNuQjs7QUFFRCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbmF2YmFyLWxvZ2luL25hdmJhci1sb2dpbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdmJhci1zaGFkb3cge1xuXHRib3gtc2hhZG93OiAwIDJweCAxMHB4IDAgcmdiYSgwLCAwLCAwLCAwLjMpO1xufVxuXG4ubmF2LXRvZ2dsZXIge1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHRtYXJnaW4tbGVmdDogMXJlbTtcblx0bGVmdDogMDtcblx0d2lkdGg6IDI1cHg7XG5cdGhlaWdodDogNDBweDtcblx0dHJhbnNpdGlvbjogMC4zcyBlYXNlO1xufVxuXG4ubmF2LXRvZ2dsZXIgc3BhbiB7XG5cdHBvc2l0aW9uOiBhYnNvbHV0ZTtcblx0ZGlzcGxheTogYmxvY2s7XG5cdHdpZHRoOiAxMDAlO1xuXHRsZWZ0OiAwO1xuXHRoZWlnaHQ6IDNweDtcblx0YmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG5cdHRyYW5zaXRpb246IDAuM3MgZWFzZTtcblx0dHJhbnNmb3JtLW9yaWdpbjogY2VudGVyO1xufVxuXG4ubmF2LXRvZ2dsZXIgc3BhbjpudGgtY2hpbGQoMSkge1xuXHR0b3A6MjYlO1xufVxuXG4ubmF2LXRvZ2dsZXIgc3BhbjpudGgtY2hpbGQoMikge1xuXHR0b3A6IDUwJTtcblx0dHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xufVxuXG4ubmF2LXRvZ2dsZXIgc3BhbjpudGgtY2hpbGQoMykge1xuXHR0b3A6IDUwJTtcblx0dHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xufVxuXG4ubmF2LXRvZ2dsZXIgc3BhbjpudGgtY2hpbGQoNCkge1xuXHRib3R0b206IDI2JTtcbn1cblxuLm5hdi10b2dnbGVyLmRyYXdlci1vcGVuIHNwYW46bnRoLWNoaWxkKDEpIHtcblx0dG9wOjUwJTtcblx0bGVmdDogNTAlO1xuXHR3aWR0aDogMCU7XG5cdG9wYWNpdHk6IDA7XG59XG5cbi5uYXYtdG9nZ2xlci5kcmF3ZXItb3BlbiBzcGFuOm50aC1jaGlsZCgyKSB7XG5cdHRvcDogNTAlO1xuXHR0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSkgcm90YXRlKC00NWRlZyk7XG59XG5cbi5uYXYtdG9nZ2xlci5kcmF3ZXItb3BlbiBzcGFuOm50aC1jaGlsZCgzKSB7XG5cdHRvcDogNTAlO1xuXHR0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSkgcm90YXRlKDQ1ZGVnKTtcbn1cblxuLm5hdi10b2dnbGVyLmRyYXdlci1vcGVuIHNwYW46bnRoLWNoaWxkKDQpIHtcblx0Ym90dG9tOjUwJTtcblx0bGVmdDogNTAlO1xuXHR3aWR0aDogMCU7XG5cdG9wYWNpdHk6IDA7XG59XG5cbi5uYXZiYXItYnJhbmQub3ZlcnJpZGUge1xuXHRwb3NpdGlvbjogcmVsYXRpdmU7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHRtYXJnaW4tbGVmdDogYXV0bztcblx0bWFyZ2luLXJpZ2h0OiBhdXRvO1xuXHRmb250LXdlaWdodDogYm9sZDtcblx0Y29sb3I6IGJsYWNrO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA0OHJlbSkge1xuXG5cdC5uYXYtdG9nZ2xlcixcblx0Lm5hdi10b2dnbGVyLm9wZW4ge1xuXHRcdGRpc3BsYXk6IG5vbmU7XG5cdH1cblxuXHQubmF2YmFyLWJyYW5kLm92ZXJyaWRlIHtcblx0XHRtYXJnaW46IDAgMXJlbSAwIDA7XG5cdH1cblxufSJdfQ== */");
 
 /***/ }),
 
@@ -68,7 +68,20 @@ var AboutComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <a class=\"navbar-brand\" href=\"#\">\n        <img src=\"assets/img/logo_home.png\" alt=\"logo\" style=\"width: 50px; height: 40px\" />\n        Cyber Oficina</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" routerLink=\"/about\" routerLinkActive=\"active\">Conheça</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"btn btn-sm btn-success\" routerLink=\"/login\" routerLinkActive=\"active\">Acessar</a>\n            </li>\n        </ul>\n    </div>\n</nav-->\n\n<nav id=\"mainNavbar\" class=\"navbar navbar-expand-sm navbar-light bg-light\">\n    <div class=\"container-fluid\">\n        <a routerLink=\"/\" class=\"navbar-brand\">APP_NAME</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n            aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\n            (click)=\"collapsed = !this.collapsed\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div id=\"navbarSupportedContent\" [ngClass]=\"{ collapse: collapsed, 'navbar-collapse': true }\">\n            <!-- right nav menus -->\n            <ul class=\"navbar-nav ml-auto\">\n                <li routerLinkActive=\"active\" class=\"nav-item\">\n                    <a routerLink=\"/LINK_1\" class=\"nav-link\"> lINK_1 </a>\n                </li>\n                <li routerLinkActive=\"active\" class=\"nav-item\">\n                    <a routerLink=\"/LINK_2\" class=\"nav-link\"> LINK_2 </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n        <a class=\"navbar-brand\" href=\"#\">\n            <img src=\"assets/img/logo_home.png\" alt=\"logo\" style=\"width: 50px; height: 40px\" />\n            Cyber Oficina</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n            aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item active\">\n                    <a class=\"nav-link\" routerLink=\"/about\" routerLinkActive=\"active\">Conheça</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"btn btn-sm btn-success\" routerLink=\"/login\" routerLinkActive=\"active\">Acessar</a>\n                </li>\n            </ul>\n        </div>\n    </nav-->\n    <header>\n        <nav class=\"navbar navbar-expand-md\" id=\"navbar\">\n          <div class=\"container\">\n            <div class=\"nav-toggler\" [class.drawer-open]=\"isDrawerOpen\" id=\"nav-toggler\" (click)=\"toggleNavDrawer(!isDrawerOpen)\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n            <a class=\"navbar-brand override\" routerLink=\"/\">\n                <img src=\"assets/img/logo_home.png\" alt=\"logo\" style=\"width: 50px; height: 40px\" />\n                Cyber Oficina</a>\n            <nav-drawer [isDrawerOpen]=\"isDrawerOpen\" (drawerToggleEmitter)=\"toggleNavDrawer($event)\"></nav-drawer>\n          </div>\n        </nav>\n      </header>\n\n");
+
+/***/ }),
+
+/***/ "+ZnX":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/account/reset-password/reset-password.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"center\">\n    <div class=\"position\">\n        <div class=\"card\">\n            <div class=\"col-md-12\">\n                <div class=\"row\">\n                    <div class=\"intro-content\">\n                        <div class=\"d-flex justify-content-left mt-2\">\n                            <img src=\"assets/img/logo_home.png\" style='width: 20%; height: 20%'\n                                class=\"img-responsive img-centered\" alt=\"\">\n                            <div class=\"brand-name mb-2 text-muted mt-4\">\n                                <h2>Cyber Oficina</h2>\n                            </div>\n                        </div>\n                        <div class=\"col-md-10\">\n                            <div class=\"brand-name-subtext text-muted mt-4\"><strong>Insira seu email cadastrado</strong>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card-body\">\n                <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\n                    <div class=\"form-group\">\n                        <label for=\"email\">Email</label>\n                        <input type=\"text\" formControlName=\"email\" class=\"form-control\"\n                            [ngClass]=\"{ 'is-invalid': submitted && f.email.errors }\" />\n                        <div *ngIf=\"submitted && f.email.errors\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.email.errors.required\">Email necessário</div>\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <button [disabled]=\"loading\" class=\"btn btn-primary\">\n                            <span *ngIf=\"loading\" class=\"spinner-border spinner-border-sm mr-1\"></span>\n                            Redefinir\n                        </button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -179,10 +192,9 @@ var AccountService = /** @class */ (function () {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(result);
         };
     };
-    /** Log a HeroService message with the MessageService */
+    /** Log a message with the MessageService */
     AccountService.prototype.log = function (message) {
         console.log(message);
-        //this.messageService.add(`HeroService: ${message}`);
     };
     AccountService.prototype.cep = function (cep) {
         var _this = this;
@@ -190,7 +202,7 @@ var AccountService = /** @class */ (function () {
         if (cep !== '') {
             var validaCep = /^[0-9]{8}$/;
             if (validaCep.test(cep)) {
-                //let url = `http://localhost:8443/cyberoficina/getCep/${cep}`;
+                //let url = `http://localhost:8080/cyberoficina/getCep/${cep}`;
                 var url = "https://cyberoficina.herokuapp.com/cyberoficina/getCep/" + cep;
                 return this.http.get(url)
                     .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (dados) {
@@ -287,7 +299,7 @@ var AccountService = /** @class */ (function () {
     AccountService.prototype.login = function (username, password) {
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
         var _this = this;
-        //const url = 'http://localhost:8443/cyberoficina/api/auth/signin';
+        //const url = 'http://localhost:8080/cyberoficina/api/auth/signin';
         var url = 'https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signin';
         return this.http.post(url, { username: username, password: password })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) {
@@ -302,13 +314,16 @@ var AccountService = /** @class */ (function () {
         // remove user from local storage and set current user to null
         localStorage.removeItem('user');
         localStorage.removeItem('token');
-        localStorage.removeItem('firstName');
+        localStorage.removeItem('lastName');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('email');
+        localStorage.removeItem('id');
         this.userSubject.next(null);
         this.router.navigate(['/account/login']);
     };
     AccountService.prototype.register = function (user) {
         //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', user);
-        //return this.http.post('http://localhost:8443/cyberoficina/api/auth/signup', user);
+        //return this.http.post('http://localhost:8080/cyberoficina/api/auth/signup', user);
         return this.http.post('https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signup', user);
     };
     AccountService.prototype.getAll = function () {
@@ -318,7 +333,7 @@ var AccountService = /** @class */ (function () {
                 .set('Authorization', "Basic " + btoa(token))
         };
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
-        //const url = 'http://localhost:8443/cyberoficina/api/auth/users';
+        //const url = 'http://localhost:8080/cyberoficina/api/auth/users';
         var url = "https://cyberoficina.herokuapp.com/cyberoficina/api/auth/users";
         return this.http.get(url, header)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (users) {
@@ -328,14 +343,19 @@ var AccountService = /** @class */ (function () {
         }));
     };
     AccountService.prototype.getById = function (id) {
+        var token = localStorage.getItem('token');
+        var header = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
+                .set('Authorization', "Basic " + btoa(token))
+        };
         //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
-        //const url = `http://localhost:8443/cyberoficina/api/auth/user/${id}`;
+        //const url = `http://localhost:8080/cyberoficina/api/auth/user/${id}`;
         var url = "https://cyberoficina.herokuapp.com/cyberoficina/api/auth/user/" + id;
-        return this.http.get(url);
+        return this.http.get(url, header);
     };
     AccountService.prototype.update = function (id, params) {
         var _this = this;
-        //const url = `http://localhost:8443/cyberoficina/api/auth/editUser/${id}`;
+        //const url = `http://localhost:8080/cyberoficina/api/auth/editUser/${id}`;
         //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUser/${id}`;
         var url = "https://cyberoficina.herokuapp.com/cyberoficina/api/auth/editUser/" + id;
         return this.http.put(url, params)
@@ -354,7 +374,7 @@ var AccountService = /** @class */ (function () {
     };
     AccountService.prototype.delete = function (id) {
         var _this = this;
-        //const url = `http://localhost:8443/cyberoficina/api/auth/deleteUser/${id}`;
+        //const url = `http://localhost:8080/cyberoficina/api/auth/deleteUser/${id}`;
         //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
         var url = "https://cyberoficina.herokuapp.com/cyberoficina/api/auth/deleteUser/" + id;
         return this.http.delete(url)
@@ -368,8 +388,34 @@ var AccountService = /** @class */ (function () {
         }));
     };
     AccountService.prototype.getPendingOrcs = function (idUser) {
+        var token = localStorage.getItem('token');
+        var header = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
+                .set('Authorization', "Basic " + btoa(token))
+        };
+        //const url = `http://localhost:8080/cyberoficina/api/auth/listOrcamentos/${idUser}/0/10`;
+        var url = "https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/" + idUser + "/0/10";
+        return this.http.get(url, header);
+    };
+    AccountService.prototype.listOrcs = function (idUser) {
+        var token = localStorage.getItem('token');
+        var header = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
+                .set('Authorization', "Basic " + btoa(token))
+        };
+        //const url = `http://localhost:8080/cyberoficina/api/auth/listOrcamentos/${idUser}/0/10`;
         var url = 'https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/16/0/10';
-        return this.http.get(url);
+        return this.http.get(url, header);
+    };
+    AccountService.prototype.resetPassword = function (email) {
+        var body = {
+            "dados": {
+                "email": email
+            }
+        };
+        return this.http.post('https://cyberoficina.herokuapp.com/cyberoficina/resetPassword', body);
+        //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', body);
+        //return this.http.post('http://localhost:8080/cyberoficina/resetPassword', body);
     };
     AccountService.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
@@ -411,7 +457,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px) {\n    .position{\n        position: relative;\n        z-index: 2;\n    }\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7RUFDRiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIC5wb3NpdGlvbntcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgfSJdfQ== */");
 
 /***/ }),
 
@@ -596,6 +642,61 @@ var fakeBackendProvider = {
 
 /***/ }),
 
+/***/ "Cr0+":
+/*!***************************************************************!*\
+  !*** ./src/app/components/nav-drawer/nav-drawer.component.ts ***!
+  \***************************************************************/
+/*! exports provided: NavDrawerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavDrawerComponent", function() { return NavDrawerComponent; });
+/* harmony import */ var _raw_loader_nav_drawer_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./nav-drawer.component.html */ "bYaN");
+/* harmony import */ var _nav_drawer_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav-drawer.component.css */ "LYeY");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var NavDrawerComponent = /** @class */ (function () {
+    function NavDrawerComponent() {
+        this.drawerToggleEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+    }
+    NavDrawerComponent.prototype.ngOnInit = function () {
+    };
+    NavDrawerComponent.prototype.onNavLinkClicked = function ($event) {
+        this.isDrawerOpen = false;
+        this.drawerToggleEmitter.emit(this.isDrawerOpen);
+    };
+    NavDrawerComponent.ctorParameters = function () { return []; };
+    NavDrawerComponent.propDecorators = {
+        isDrawerOpen: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["HostBinding"], args: ['class.drawer-open',] }],
+        drawerToggleEmitter: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"] }]
+    };
+    NavDrawerComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'nav-drawer',
+            template: _raw_loader_nav_drawer_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_nav_drawer_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [])
+    ], NavDrawerComponent);
+    return NavDrawerComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "DIg/":
 /*!********************************************************!*\
   !*** ./src/app/components/navbar/navbar.component.css ***!
@@ -694,7 +795,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"logo\">\n    <a href=\"https://www.cyberoficina.com.br\" class=\"simple-text text-dark\">\n        <div class=\"logo-img\">\n            <img src=\"https://raw.githubusercontent.com/phbrazil/Logos/master/logo_home.png\" />\n        </div>\n        Cyber Oficina\n    </a>\n    <div class=\"col-md-10\">\n        <small>Olá {{firstName}}!</small>\n    </div>\n</div>\n<div class=\"sidebar-wrapper\">\n    <div *ngIf=\"isMobileMenu()\">\n        <form class=\"navbar-form\">\n            <span class=\"bmd-form-group\">\n                <div class=\"input-group no-border\">\n                    <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Search...\">\n                    <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                        <em class=\"material-icons\">search</em>\n                        <div class=\"ripple-container\"></div>\n                    </button>\n                </div>\n            </span>\n        </form>\n        <ul class=\"nav navbar-nav nav-mobile-menu\">\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"javascript:void(0)\">\n                    <i class=\"material-icons\">dashboard</i>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Stats</span>\n                    </p>\n                </a>\n            </li>\n            <li class=\"nav-item dropdown\">\n                <a class=\"nav-link\" href=\"javascript:void(0)\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\"\n                    aria-haspopup=\"true\" aria-expanded=\"false\">\n                    <i class=\"material-icons\">notifications</i>\n                    <span class=\"notification\">56</span>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                    </p>\n                </a>\n                <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                    <a class=\"dropdown-item\" href=\"#\">Mike John responded to your email</a>\n                    <a class=\"dropdown-item\" href=\"#\">You have 5 new tasks</a>\n                    <a class=\"dropdown-item\" href=\"#\">You're now friend with Andrew</a>\n                    <a class=\"dropdown-item\" href=\"#\">Another Notification</a>\n                    <a class=\"dropdown-item\" href=\"#\">Another One</a>\n                </div>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" (click)=\"logout()\">\n                    <em class=\"material-icons\">person</em>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Sair</span>\n                    </p>\n                </a>\n            </li>\n        </ul>\n    </div>\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"[menuItem.path]\">\n                <i class=\"material-icons\">{{menuItem.icon}}</i>\n                <p>{{menuItem.title}}</p>\n            </a>\n        </li>\n    </ul>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"logo\">\n    <a href=\"https://www.cyberoficina.com.br\" class=\"simple-text text-dark\">\n        <div class=\"logo-img\">\n            <img src=\"https://raw.githubusercontent.com/phbrazil/Logos/master/logo_home.png\" />\n        </div>\n        Cyber Oficina\n    </a>\n    <div class=\"col-md-10\">\n        <small>Olá {{nome}}!</small>\n    </div>\n</div>\n<div class=\"sidebar-wrapper\">\n    <div *ngIf=\"isMobileMenu()\">\n        <!--form class=\"navbar-form\">\n            <span class=\"bmd-form-group\">\n                <div class=\"input-group no-border\">\n                    <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Search...\">\n                    <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                        <em class=\"material-icons\">search</em>\n                        <div class=\"ripple-container\"></div>\n                    </button>\n                </div>\n            </span>\n        </form-->\n        <ul class=\"nav navbar-nav nav-mobile-menu\">\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" routerLink=\"/orcamento\">\n                    <i class=\"material-icons\">description</i>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Novo Orçamento</span>\n                    </p>\n                </a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" routerLink=\"/meus-orcamentos\">\n                    <i class=\"material-icons\">description</i>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Meus Orçamentos</span>\n                    </p>\n                </a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" routerLink=\"/dashboard\">\n                    <i class=\"material-icons\">dashboard</i>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Estatísticas</span>\n                    </p>\n                </a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" routerLink=\"/user-profile\">\n                    <i class=\"material-icons\">person</i>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Perfil</span>\n                    </p>\n                </a>\n            </li>\n            <li class=\"nav-item dropdown\">\n                <a class=\"nav-link\" href=\"javascript:void(0)\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\"\n                    aria-haspopup=\"true\" aria-expanded=\"false\">\n                    <i class=\"material-icons\">notifications</i>\n                    <span class=\"notification\">{{total}}</span>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Notificações</span>\n                    </p>\n                </a>\n                <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                    <a *ngFor=\"let orcamento of orcamentos\" class=\"dropdown-item\" href=\"#\">{{orcamento.marca}} {{orcamento.veiculo}}</a>\n                </div>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" (click)=\"logout()\">\n                    <i class=\"material-icons\">logout</i>\n                    <p>\n                        <span class=\"d-lg-none d-md-block\">Sair</span>\n                    </p>\n                </a>\n            </li>\n        </ul>\n    </div>\n    <div *ngIf=\"!isMobileMenu()\">\n        <ul class=\"nav\">\n            <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"[menuItem.path]\">\n                    <i class=\"material-icons\">{{menuItem.icon}}</i>\n                    <p>{{menuItem.title}}</p>\n                </a>\n            </li>\n        </ul>\n    </div>\n</div>");
+
+/***/ }),
+
+/***/ "LYeY":
+/*!****************************************************************!*\
+  !*** ./src/app/components/nav-drawer/nav-drawer.component.css ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (":host {\n\tposition: fixed;\n\tdisplay: block;\n\ttop: 0;\n\tleft: 0;\n\theight: 100vh;\n\twidth: 0;\n\tbackground-color: white;\n\ttransition: 0.3s ease;\n\toverflow: hidden;\n\topacity: 0.3;\n\ttouch-action: none;\n}\n\n:host.drawer-open {\n\twidth: 70vw;\n\topacity: 1;\n}\n\n@media only screen and (max-width: 600px) {\n    .position{\n        position: relative;\n        z-index: -2;\n    }\n  }\n\n.navbar-nav.override {\n\tpadding: 1rem 2rem;\n}\n\n.nav-item.override {\n\tfont-size: 1.25rem;\n\tpadding: 1rem 0 0.5rem 0;\n\tcolor: rgba(50, 50, 50, 0.8);\n\tborder-bottom: 1px solid rgba(20, 20, 20, 0.9);\n\n}\n\n.nav-link.override {\n\ttext-decoration: none;\n\tcolor: inherit;\n}\n\n.nav-item.override:active > .nav-link.override {\n\tcolor: gray;\n}\n\n.drawer-inset-shadow {\n\tposition: absolute;\n\tdisplay: block;\n\tright: 0;\n\ttop: 0;\n\twidth: 10px;\n\tmin-height: 100vh;\n\theight: 100vh;\n\tbackground: linear-gradient(to left, rgba(128, 128, 128, 0.4), rgba(128, 128, 128, 0.2), rgba(128, 128, 128, 0.05), rgba(128, 128, 128, 0));\n}\n\n@media screen and (min-width: 48rem) {\n\n\t:host {\n\t\tposition: relative;\n\t\tdisplay: block;\n\t\tleft: unset;\n\t\ttop: unset;\n\t\theight: unset;\n\t\twidth: unset;\n\t\tmargin-left: auto;\n\t\tbackground-color: unset;\n\t\tbox-shadow: none;\n\t\topacity: 1;\n\t}\n\n\t:host.drawer-open {\n\t\twidth: unset;\n\t}\n\n\t.navbar-nav.override {\n\t\tpadding: unset;\n\t}\n\n\t.nav-item.override {\n\t\tfont-size: 1.25rem;\n\t\tpadding: unset;\n\t\tmargin-left: 1.5rem;\n\t\tborder-bottom: none;\n\t}\n\n\t.drawer-inset-shadow {\n\t\tdisplay: none;\n\t}\n\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9uYXYtZHJhd2VyL25hdi1kcmF3ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLGVBQWU7Q0FDZixjQUFjO0NBQ2QsTUFBTTtDQUNOLE9BQU87Q0FDUCxhQUFhO0NBQ2IsUUFBUTtDQUNSLHVCQUF1QjtDQUN2QixxQkFBcUI7Q0FDckIsZ0JBQWdCO0NBQ2hCLFlBQVk7Q0FDWixrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxXQUFXO0NBQ1gsVUFBVTtBQUNYOztBQUVBO0lBQ0k7UUFDSSxrQkFBa0I7UUFDbEIsV0FBVztJQUNmO0VBQ0Y7O0FBRUY7Q0FDQyxrQkFBa0I7QUFDbkI7O0FBRUE7Q0FDQyxrQkFBa0I7Q0FDbEIsd0JBQXdCO0NBQ3hCLDRCQUE0QjtDQUM1Qiw4Q0FBOEM7O0FBRS9DOztBQUVBO0NBQ0MscUJBQXFCO0NBQ3JCLGNBQWM7QUFDZjs7QUFFQTtDQUNDLFdBQVc7QUFDWjs7QUFFQTtDQUNDLGtCQUFrQjtDQUNsQixjQUFjO0NBQ2QsUUFBUTtDQUNSLE1BQU07Q0FDTixXQUFXO0NBQ1gsaUJBQWlCO0NBQ2pCLGFBQWE7Q0FDYiwySUFBMkk7QUFDNUk7O0FBRUE7O0NBRUM7RUFDQyxrQkFBa0I7RUFDbEIsY0FBYztFQUNkLFdBQVc7RUFDWCxVQUFVO0VBQ1YsYUFBYTtFQUNiLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsdUJBQXVCO0VBQ3ZCLGdCQUFnQjtFQUNoQixVQUFVO0NBQ1g7O0NBRUE7RUFDQyxZQUFZO0NBQ2I7O0NBRUE7RUFDQyxjQUFjO0NBQ2Y7O0NBRUE7RUFDQyxrQkFBa0I7RUFDbEIsY0FBYztFQUNkLG1CQUFtQjtFQUNuQixtQkFBbUI7Q0FDcEI7O0NBRUE7RUFDQyxhQUFhO0NBQ2Q7O0FBRUQiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL25hdi1kcmF3ZXIvbmF2LWRyYXdlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuXHRwb3NpdGlvbjogZml4ZWQ7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHR0b3A6IDA7XG5cdGxlZnQ6IDA7XG5cdGhlaWdodDogMTAwdmg7XG5cdHdpZHRoOiAwO1xuXHRiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcblx0dHJhbnNpdGlvbjogMC4zcyBlYXNlO1xuXHRvdmVyZmxvdzogaGlkZGVuO1xuXHRvcGFjaXR5OiAwLjM7XG5cdHRvdWNoLWFjdGlvbjogbm9uZTtcbn1cblxuOmhvc3QuZHJhd2VyLW9wZW4ge1xuXHR3aWR0aDogNzB2dztcblx0b3BhY2l0eTogMTtcbn1cblxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIC5wb3NpdGlvbntcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAtMjtcbiAgICB9XG4gIH1cblxuLm5hdmJhci1uYXYub3ZlcnJpZGUge1xuXHRwYWRkaW5nOiAxcmVtIDJyZW07XG59XG5cbi5uYXYtaXRlbS5vdmVycmlkZSB7XG5cdGZvbnQtc2l6ZTogMS4yNXJlbTtcblx0cGFkZGluZzogMXJlbSAwIDAuNXJlbSAwO1xuXHRjb2xvcjogcmdiYSg1MCwgNTAsIDUwLCAwLjgpO1xuXHRib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgyMCwgMjAsIDIwLCAwLjkpO1xuXG59XG5cbi5uYXYtbGluay5vdmVycmlkZSB7XG5cdHRleHQtZGVjb3JhdGlvbjogbm9uZTtcblx0Y29sb3I6IGluaGVyaXQ7XG59XG5cbi5uYXYtaXRlbS5vdmVycmlkZTphY3RpdmUgPiAubmF2LWxpbmsub3ZlcnJpZGUge1xuXHRjb2xvcjogZ3JheTtcbn1cblxuLmRyYXdlci1pbnNldC1zaGFkb3cge1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHRyaWdodDogMDtcblx0dG9wOiAwO1xuXHR3aWR0aDogMTBweDtcblx0bWluLWhlaWdodDogMTAwdmg7XG5cdGhlaWdodDogMTAwdmg7XG5cdGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byBsZWZ0LCByZ2JhKDEyOCwgMTI4LCAxMjgsIDAuNCksIHJnYmEoMTI4LCAxMjgsIDEyOCwgMC4yKSwgcmdiYSgxMjgsIDEyOCwgMTI4LCAwLjA1KSwgcmdiYSgxMjgsIDEyOCwgMTI4LCAwKSk7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDQ4cmVtKSB7XG5cblx0Omhvc3Qge1xuXHRcdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0XHRkaXNwbGF5OiBibG9jaztcblx0XHRsZWZ0OiB1bnNldDtcblx0XHR0b3A6IHVuc2V0O1xuXHRcdGhlaWdodDogdW5zZXQ7XG5cdFx0d2lkdGg6IHVuc2V0O1xuXHRcdG1hcmdpbi1sZWZ0OiBhdXRvO1xuXHRcdGJhY2tncm91bmQtY29sb3I6IHVuc2V0O1xuXHRcdGJveC1zaGFkb3c6IG5vbmU7XG5cdFx0b3BhY2l0eTogMTtcblx0fVxuXG5cdDpob3N0LmRyYXdlci1vcGVuIHtcblx0XHR3aWR0aDogdW5zZXQ7XG5cdH1cblxuXHQubmF2YmFyLW5hdi5vdmVycmlkZSB7XG5cdFx0cGFkZGluZzogdW5zZXQ7XG5cdH1cblxuXHQubmF2LWl0ZW0ub3ZlcnJpZGUge1xuXHRcdGZvbnQtc2l6ZTogMS4yNXJlbTtcblx0XHRwYWRkaW5nOiB1bnNldDtcblx0XHRtYXJnaW4tbGVmdDogMS41cmVtO1xuXHRcdGJvcmRlci1ib3R0b206IG5vbmU7XG5cdH1cblxuXHQuZHJhd2VyLWluc2V0LXNoYWRvdyB7XG5cdFx0ZGlzcGxheTogbm9uZTtcblx0fVxuXG59Il19 */");
 
 /***/ }),
 
@@ -755,6 +869,19 @@ var FooterComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"jw-modal\">\n    <div class=\"jw-modal-body\">\n        <ng-content></ng-content>\n    </div>\n</div>\n<div class=\"jw-modal-background\"></div>\n\n\n<!--CHAMAR MODAL-->\n<!--button (click)=\"openModal('custom-modal-1')\">Open Modal 1</button>\n\n<jw-modal id=\"custom-modal-1\">\n    <button class=\"btn btn-sm btn-secondary\" (click)=\"closeModal('custom-modal-1');\">Fechar</button>\n</jw-modal-->");
+
+/***/ }),
+
+/***/ "Nxld":
+/*!**********************************************************************!*\
+  !*** ./src/app/account/reset-password/reset-password.component.scss ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px) {\n  .position {\n    z-index: -1000000;\n    margin: auto;\n    padding: 10px;\n  }\n}\n@media only screen and (min-width: 600px) {\n  .center {\n    margin: auto;\n    width: 30%;\n    padding: 10px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9yZXNldC1wYXNzd29yZC9yZXNldC1wYXNzd29yZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJO0lBRUksaUJBQUE7SUFDQSxZQUFBO0lBQ0EsYUFBQTtFQUROO0FBQ0Y7QUFJRTtFQUVBO0lBQ0UsWUFBQTtJQUNBLFVBQUE7SUFDQSxhQUFBO0VBSEY7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2FjY291bnQvcmVzZXQtcGFzc3dvcmQvcmVzZXQtcGFzc3dvcmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICAucG9zaXRpb257XG4gICAgICAgIC8vcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAtMTAwMDAwMDtcbiAgICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgICBwYWRkaW5nOiAxMHB4O1xuXG4gICAgfVxuICB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNjAwcHgpIHtcblxuICAuY2VudGVyIHtcbiAgICBtYXJnaW46IGF1dG87XG4gICAgd2lkdGg6IDMwJTtcbiAgICBwYWRkaW5nOiAxMHB4O1xuICB9XG59Il19 */");
 
 /***/ }),
 
@@ -1070,7 +1197,7 @@ var AlertComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n          <a class=\"navbar-brand\" href=\"javascript:void(0)\">{{getTitle()}}</a>\n        </div>\n        <button mat-raised-button class=\"navbar-toggler\" type=\"button\" (click)=\"sidebarToggle()\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse justify-content-end\" id=\"navigation\">\n            <form class=\"navbar-form\">\n                <div class=\"input-group no-border\">\n                    <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Search...\">\n                    <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                        <i class=\"material-icons\">search</i>\n                        <div class=\"ripple-container\"></div>\n                    </button>\n                </div>\n            </form>\n            <ul class=\"navbar-nav\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"javascript:void(0)\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Stats</span>\n                        </p>\n                    </a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link\" href=\"javascript:void(0)\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">5</span>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Some Actions</span>\n                        </p>\n                    </a>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                        <a class=\"dropdown-item\" href=\"javascript:void(0)\">Mike John responded to your email</a>\n                        <a class=\"dropdown-item\" href=\"javascript:void(0)\">You have 5 new tasks</a>\n                        <a class=\"dropdown-item\" href=\"javascript:void(0)\">You're now friend with Andrew</a>\n                        <a class=\"dropdown-item\" href=\"javascript:void(0)\">Another Notification</a>\n                        <a class=\"dropdown-item\" href=\"javascript:void(0)\">Another One</a>\n                    </div>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" (click)=\"logout()\">\n                        <em class=\"material-icons\">person</em>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Sair</span>\n                        </p>\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!--\n\n<nav class=\"navbar navbar-transparent navbar-absolute\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button mat-raised-button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" (click)=\"sidebarToggle()\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"javascript:void(0)\">{{getTitle()}}</a>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li>\n                    <a href=\"javascript:void(0)\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p class=\"hidden-lg hidden-md\">Dashboard</p>\n                    </a>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"javascript:void(0)\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">5</span>\n                        <p class=\"hidden-lg hidden-md\">Notifications</p>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"javascript:void(0)\">Mike John responded to your email</a></li>\n                        <li><a href=\"javascript:void(0)\">You have 5 new tasks</a></li>\n                        <li><a href=\"javascript:void(0)\">You're now friend with Andrew</a></li>\n                        <li><a href=\"javascript:void(0)\">Another Notification</a></li>\n                        <li><a href=\"javascript:void(0)\">Another One</a></li>\n                    </ul>\n                </li>\n                <li>\n                    <a href=\"javascript:void(0)\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                       <i class=\"material-icons\">person</i>\n                       <p class=\"hidden-lg hidden-md\">Profile</p>\n                    </a>\n                </li>\n            </ul>\n\n            <form class=\"navbar-form navbar-right\" role=\"search\">\n                <div class=\"form-group form-black is-empty\">\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n                    <span class=\"material-input\"></span>\n                </div>\n                <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                    <i class=\"material-icons\">search</i><div class=\"ripple-container\"></div>\n                </button>\n            </form>\n        </div>\n    </div>\n</nav> -->\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n          <a class=\"navbar-brand\" href=\"javascript:void(0)\">{{getTitle()}}</a>\n        </div>\n        <button mat-raised-button class=\"navbar-toggler\" type=\"button\" (click)=\"sidebarToggle()\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse justify-content-end\" id=\"navigation\">\n            <!--form class=\"navbar-form\">\n                <div class=\"input-group no-border\">\n                    <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"Search...\">\n                    <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                        <i class=\"material-icons\">search</i>\n                        <div class=\"ripple-container\"></div>\n                    </button>\n                </div>\n            </form-->\n            <ul class=\"navbar-nav\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"javascript:void(0)\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Stats</span>\n                        </p>\n                    </a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link\" href=\"javascript:void(0)\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">{{total}}</span>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Orçamentos Pendentes</span>\n                        </p>\n                    </a>\n                    <div  class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdownMenuLink\">\n                        <a *ngFor=\"let orcamento of orcamentos\" class=\"dropdown-item\" href=\"javascript:void(0)\">{{orcamento.marca}} {{orcamento.veiculo}}</a>\n\n                    </div>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" (click)=\"logout()\">\n                        <i class=\"material-icons\">logout</i>\n                        <p>\n                            <span class=\"d-lg-none d-md-block\">Sair</span>\n                        </p>\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!--\n\n<nav class=\"navbar navbar-transparent navbar-absolute\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button mat-raised-button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" (click)=\"sidebarToggle()\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"javascript:void(0)\">{{getTitle()}}</a>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li>\n                    <a href=\"javascript:void(0)\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">dashboard</i>\n                        <p class=\"hidden-lg hidden-md\">Dashboard</p>\n                    </a>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"javascript:void(0)\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        <i class=\"material-icons\">notifications</i>\n                        <span class=\"notification\">5</span>\n                        <p class=\"hidden-lg hidden-md\">Notifications</p>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"javascript:void(0)\">Mike John responded to your email</a></li>\n                        <li><a href=\"javascript:void(0)\">You have 5 new tasks</a></li>\n                        <li><a href=\"javascript:void(0)\">You're now friend with Andrew</a></li>\n                        <li><a href=\"javascript:void(0)\">Another Notification</a></li>\n                        <li><a href=\"javascript:void(0)\">Another One</a></li>\n                    </ul>\n                </li>\n                <li>\n                    <a href=\"javascript:void(0)\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                       <i class=\"material-icons\">person</i>\n                       <p class=\"hidden-lg hidden-md\">Profile</p>\n                    </a>\n                </li>\n            </ul>\n\n            <form class=\"navbar-form navbar-right\" role=\"search\">\n                <div class=\"form-group form-black is-empty\">\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n                    <span class=\"material-input\"></span>\n                </div>\n                <button mat-raised-button type=\"submit\" class=\"btn btn-white btn-round btn-just-icon\">\n                    <i class=\"material-icons\">search</i><div class=\"ripple-container\"></div>\n                </button>\n            </form>\n        </div>\n    </div>\n</nav> -->\n");
 
 /***/ }),
 
@@ -1167,7 +1294,7 @@ var AppComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngFor=\"let alert of alerts\" class=\"{{cssClass(alert)}}\">\n    <a class=\"close\" (click)=\"removeAlert(alert)\">&times;</a>\n    <span [innerHTML]=\"alert.message\"></span>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container h-100 d-flex justify-content-center\">\n    <!--div class=\"col-md-6\" style=\"position: absolute; z-index: 1000;\"-->\n    <div class=\"col-md-6\">\n        <div *ngFor=\"let alert of alerts\" class=\"{{cssClass(alert)}}\" >\n            <a class=\"close\" (click)=\"removeAlert(alert)\">&times;</a>\n            <span [innerHTML]=\"alert.message\"></span>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -1180,7 +1307,111 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!user\">\n    <app-navbar-login></app-navbar-login>\n</div>\n\n<div class=\"app-container\" [ngClass]=\"{ 'bg-light': user }\">\n    <app-alert></app-alert>\n    <router-outlet></router-outlet>\n</div>\n\n<!--CHAMAR MODAL-->\n<!--button class=\"btn btn-sm btn-secondary\" (click)=\"openModal('custom-modal-1', 'Field 1')\">Abrir Modal</button>\n\n<jw-modal id=\"custom-modal-1\">\n<h1>huhueheuehu</h1>\n<button class=\"btn btn-sm btn-secondary\" (click)=\"closeModal('custom-modal-1');\">Fechar</button>\n</jw-modal-->");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!user\" class=\"position\">\n    <app-navbar-login></app-navbar-login>\n</div>\n\n<div [ngClass]=\"{ 'bg-light': user }\">\n    <app-alert></app-alert>\n    <router-outlet></router-outlet>\n</div>\n\n<!--CHAMAR MODAL-->\n<!--button class=\"btn btn-sm btn-secondary\" (click)=\"openModal('custom-modal-1', 'Field 1')\">Abrir Modal</button>\n\n<jw-modal id=\"custom-modal-1\">\n<h1>huhueheuehu</h1>\n<button class=\"btn btn-sm btn-secondary\" (click)=\"closeModal('custom-modal-1');\">Fechar</button>\n</jw-modal-->");
+
+/***/ }),
+
+/***/ "WPDf":
+/*!********************************************************************!*\
+  !*** ./src/app/account/reset-password/reset-password.component.ts ***!
+  \********************************************************************/
+/*! exports provided: ResetPasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResetPasswordComponent", function() { return ResetPasswordComponent; });
+/* harmony import */ var _raw_loader_reset_password_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./reset-password.component.html */ "+ZnX");
+/* harmony import */ var _reset_password_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reset-password.component.scss */ "Nxld");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var app_services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/_services */ "J9tS");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var ResetPasswordComponent = /** @class */ (function () {
+    function ResetPasswordComponent(formBuilder, route, router, accountService, alertService) {
+        this.formBuilder = formBuilder;
+        this.route = route;
+        this.router = router;
+        this.accountService = accountService;
+        this.alertService = alertService;
+        this.loading = false;
+        this.submitted = false;
+    }
+    ResetPasswordComponent.prototype.ngOnInit = function () {
+        this.form = this.formBuilder.group({
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+        });
+        // get return url from route parameters or default to '/'
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    };
+    Object.defineProperty(ResetPasswordComponent.prototype, "f", {
+        // convenience getter for easy access to form fields
+        get: function () { return this.form.controls; },
+        enumerable: false,
+        configurable: true
+    });
+    ResetPasswordComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.submitted = true;
+        // reset alerts on submit
+        this.alertService.clear();
+        // stop here if form is invalid
+        if (this.form.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.accountService.resetPassword(this.f.email.value)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["first"])())
+            .subscribe(function (data) {
+            _this.alertService.info('Em breve você receberá um email com informações');
+            _this.form.reset();
+            _this.loading = false;
+            //this.router.navigate([this.returnUrl]);
+        }, function (error) {
+            _this.alertService.error('Um erro ocorreu, tente novamente mais tarde. Status: ', error.status);
+            _this.loading = false;
+        });
+    };
+    ResetPasswordComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: app_services__WEBPACK_IMPORTED_MODULE_6__["AccountService"] },
+        { type: app_services__WEBPACK_IMPORTED_MODULE_6__["AlertService"] }
+    ]; };
+    ResetPasswordComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'app-reset-password',
+            template: _raw_loader_reset_password_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_reset_password_component_scss__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            app_services__WEBPACK_IMPORTED_MODULE_6__["AccountService"],
+            app_services__WEBPACK_IMPORTED_MODULE_6__["AlertService"]])
+    ], ResetPasswordComponent);
+    return ResetPasswordComponent;
+}());
+
+
 
 /***/ }),
 
@@ -1254,12 +1485,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal_login_modal_login_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/modal-login/modal-login-module */ "qJiw");
 /* harmony import */ var _account_register_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./account/register.component */ "q8HH");
 /* harmony import */ var _components_navbar_login_navbar_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/navbar-login/navbar-login.component */ "rxn9");
+/* harmony import */ var _meus_orcamentos_meus_orcamentos_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./meus-orcamentos/meus-orcamentos.component */ "tgHG");
+/* harmony import */ var _account_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./account/reset-password/reset-password.component */ "WPDf");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1302,6 +1537,8 @@ var AppModule = /** @class */ (function () {
                 _components_alert__WEBPACK_IMPORTED_MODULE_10__["AlertComponent"],
                 _account_register_component__WEBPACK_IMPORTED_MODULE_14__["RegisterComponent"],
                 _components_navbar_login_navbar_login_component__WEBPACK_IMPORTED_MODULE_15__["NavbarLoginComponent"],
+                _meus_orcamentos_meus_orcamentos_component__WEBPACK_IMPORTED_MODULE_16__["MeusOrcamentosComponent"],
+                _account_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_17__["ResetPasswordComponent"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
@@ -1327,6 +1564,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "bYaN":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/nav-drawer/nav-drawer.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ul id=\"navbar-list\" class=\"navbar-nav override position\">\n    <!--li class=\"nav-item override\" (click)=\"onNavLinkClicked($event)\">\n        <a routerLink=\"/\" class=\"nav-link override\" id=\"Home\">Home</a>\n    </li-->\n    <li class=\"nav-item override\" (click)=\"onNavLinkClicked($event)\">\n        <a routerLink=\"/about\" class=\"nav-link override text-dark\" id=\"About\"><em class=\"material-icons\">info</em>\n            <strong>Conheça</strong>\n        </a>\n    </li>\n    <li class=\"nav-item override text-dark\" (click)=\"onNavLinkClicked($event)\">\n        <a routerLink=\"/login\" class=\"nav-link override\" id=\"Acessar\"> <em class=\"material-icons\">person</em>\n            <strong>Acessar</strong>\n        </a>\n    </li>\n</ul>\n<span class=\"drawer-inset-shadow\"></span>");
+
+/***/ }),
+
 /***/ "beVS":
 /*!********************************!*\
   !*** ./src/app/app.routing.ts ***!
@@ -1344,12 +1594,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layouts/admin-layout/admin-layout.component */ "P6kD");
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_helpers */ "XgRA");
 /* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/about/about.component */ "+DhY");
+/* harmony import */ var _account_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./account/reset-password/reset-password.component */ "WPDf");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1375,10 +1627,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var accountModule = function () { return __webpack_require__.e(/*! import() | account-account-module */ "account-account-module").then(__webpack_require__.bind(null, /*! ./account/account.module */ "jcJX")).then(function (x) { return x.AccountModule; }); };
 var usersModule = function () { return __webpack_require__.e(/*! import() | users-users-module */ "users-users-module").then(__webpack_require__.bind(null, /*! ./users/users.module */ "zrcO")).then(function (x) { return x.UsersModule; }); };
 var routes = [
+    //NOVAS ROTAS EXTERNAS DO SITE DEVEM SER INCLUIDAS AQUI
     { path: 'about', component: _components_about_about_component__WEBPACK_IMPORTED_MODULE_6__["AboutComponent"] },
-    { path: '', redirectTo: 'dashboard',
+    { path: 'reset-password', component: _account_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_7__["ResetPasswordComponent"] },
+    {
+        path: '', redirectTo: 'dashboard',
         pathMatch: 'full',
-        canActivate: [_helpers__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"]] },
+        canActivate: [_helpers__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"]]
+    },
     {
         path: '',
         component: _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_4__["AdminLayoutComponent"],
@@ -1447,6 +1703,19 @@ webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 };
 webpackAsyncContext.id = "crnd";
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ "d0E5":
+/*!***************************************************************!*\
+  !*** ./src/app/meus-orcamentos/meus-orcamentos.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21ldXMtb3JjYW1lbnRvcy9tZXVzLW9yY2FtZW50b3MuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1545,6 +1814,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var app_services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/_services */ "J9tS");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1561,6 +1831,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var NavbarComponent = /** @class */ (function () {
     function NavbarComponent(location, element, router, accountService) {
         var _this = this;
@@ -1568,12 +1839,19 @@ var NavbarComponent = /** @class */ (function () {
         this.router = router;
         this.accountService = accountService;
         this.mobile_menu_visible = 0;
+        //user: User;
+        this.user = JSON.parse(localStorage.getItem('user'));
+        //notification
+        this.orcamentos = [];
+        this.total = 0;
         this.location = location;
         this.sidebarVisible = false;
         this.accountService.user.subscribe(function (x) { return _this.user = x; });
     }
     NavbarComponent.prototype.ngOnInit = function () {
+        //NOTIFICATION
         var _this = this;
+        this.listOrcs(this.user.id);
         this.listTitles = _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_3__["ROUTES"].filter(function (listTitle) { return listTitle; });
         var navbar = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
@@ -1669,6 +1947,16 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent.prototype.logout = function () {
         this.accountService.logout();
     };
+    //LIST PENDING ORCS
+    NavbarComponent.prototype.listOrcs = function (idUser) {
+        var _this = this;
+        this.accountService.getPendingOrcs(idUser)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["first"])())
+            .subscribe(function (x) {
+            _this.orcamentos = x['orcamentos'];
+            _this.total = x['totalElements'];
+        });
+    };
     NavbarComponent.ctorParameters = function () { return [
         { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"] },
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"] },
@@ -1708,12 +1996,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./navbar/navbar.component */ "hrlM");
 /* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "zBoC");
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./about/about.component */ "+DhY");
+/* harmony import */ var _nav_drawer_nav_drawer_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./nav-drawer/nav-drawer.component */ "Cr0+");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1735,11 +2025,13 @@ var ComponentsModule = /** @class */ (function () {
                 _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"],
                 _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_5__["SidebarComponent"],
                 _about_about_component__WEBPACK_IMPORTED_MODULE_6__["AboutComponent"],
+                _nav_drawer_nav_drawer_component__WEBPACK_IMPORTED_MODULE_7__["NavDrawerComponent"],
             ],
             exports: [
                 _footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"],
                 _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"],
-                _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_5__["SidebarComponent"]
+                _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_5__["SidebarComponent"],
+                _nav_drawer_nav_drawer_component__WEBPACK_IMPORTED_MODULE_7__["NavDrawerComponent"]
             ]
         })
     ], ComponentsModule);
@@ -1767,6 +2059,19 @@ var User = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "jc8T":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/meus-orcamentos/meus-orcamentos.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <table class=\"table\">\n            <thead class=\"thead-dark\">\n                <tr>\n                    <th scope=\"col\">#</th>\n                    <th scope=\"col\">Fabricante</th>\n                    <th scope=\"col\">Veiculo</th>\n                    <th scope=\"col\">Status</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let orcamento of orcamentos\">\n                    <th scope=\"row\">1</th>\n                    <td>{{orcamento.marca}}</td>\n                    <td>{{orcamento.veiculo}}</td>\n                    <td>@mdo</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -2287,17 +2592,42 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var NavbarLoginComponent = /** @class */ (function () {
     function NavbarLoginComponent() {
-        this.collapsed = true;
+        this.drawerToggleEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
         this.isLogged = false;
     }
-    NavbarLoginComponent.prototype.ngOnChanges = function (changes) {
-    };
     NavbarLoginComponent.prototype.ngOnInit = function () {
+        this.navElement = null;
+        this.isDrawerOpen = false;
         if (localStorage.getItem('firstName') != null) {
             this.isLogged = true;
         }
     };
+    NavbarLoginComponent.prototype.ngAfterViewInit = function () {
+        this.navElement = document.getElementById("navbar");
+    };
+    NavbarLoginComponent.prototype.onScroll = function ($event) {
+        var scrollFactor = 200;
+        var opacity = (window.pageYOffset / scrollFactor);
+        opacity = opacity < 1 ? opacity : 1;
+        if (opacity <= 1) {
+            this.navElement.style.backgroundColor = "rgba(255, 255, 255, " + opacity + ")";
+        }
+        if (window.pageYOffset / scrollFactor > 1) {
+            this.navElement.classList.add("navbar-shadow");
+        }
+        else {
+            this.navElement.classList.remove("navbar-shadow");
+        }
+    };
+    NavbarLoginComponent.prototype.toggleNavDrawer = function (isDrawerOpen) {
+        this.isDrawerOpen = isDrawerOpen;
+        this.drawerToggleEmitter.emit(this.isDrawerOpen);
+    };
     NavbarLoginComponent.ctorParameters = function () { return []; };
+    NavbarLoginComponent.propDecorators = {
+        drawerToggleEmitter: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"] }],
+        onScroll: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["HostListener"], args: ["window:scroll", ["$event"],] }]
+    };
     NavbarLoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-navbar-login',
@@ -2363,6 +2693,71 @@ var ModalService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "tgHG":
+/*!**************************************************************!*\
+  !*** ./src/app/meus-orcamentos/meus-orcamentos.component.ts ***!
+  \**************************************************************/
+/*! exports provided: MeusOrcamentosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MeusOrcamentosComponent", function() { return MeusOrcamentosComponent; });
+/* harmony import */ var _raw_loader_meus_orcamentos_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./meus-orcamentos.component.html */ "jc8T");
+/* harmony import */ var _meus_orcamentos_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./meus-orcamentos.component.css */ "d0E5");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var app_services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/_services */ "J9tS");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MeusOrcamentosComponent = /** @class */ (function () {
+    function MeusOrcamentosComponent(accountService) {
+        this.accountService = accountService;
+        this.orcamentos = [];
+        this.user = JSON.parse(localStorage.getItem('user'));
+    }
+    MeusOrcamentosComponent.prototype.ngOnInit = function () {
+        this.listOrcs(this.user.id);
+    };
+    //LIST PENDING ORCS
+    MeusOrcamentosComponent.prototype.listOrcs = function (idUser) {
+        var _this = this;
+        this.accountService.getPendingOrcs(idUser)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
+            .subscribe(function (x) {
+            _this.orcamentos = x['orcamentos'];
+        });
+    };
+    MeusOrcamentosComponent.ctorParameters = function () { return [
+        { type: app_services__WEBPACK_IMPORTED_MODULE_3__["AccountService"] }
+    ]; };
+    MeusOrcamentosComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'app-meus-orcamentos',
+            template: _raw_loader_meus_orcamentos_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
+            styles: [_meus_orcamentos_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
+        }),
+        __metadata("design:paramtypes", [app_services__WEBPACK_IMPORTED_MODULE_3__["AccountService"]])
+    ], MeusOrcamentosComponent);
+    return MeusOrcamentosComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "vtrx":
 /*!******************************************************************!*\
   !*** ./src/app/layouts/admin-layout/admin-layout.component.scss ***!
@@ -2391,6 +2786,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sidebar_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar.component.css */ "2DHQ");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var app_services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/_services */ "J9tS");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2404,23 +2800,32 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ROUTES = [
-    { path: '/dashboard', title: 'Dashboard', icon: 'dashboard', class: '' },
+    { path: '/orcamento', title: 'Novo Orçamento', icon: 'description', class: '' },
+    { path: '/meus-orcamentos', title: 'Meus Orçamentos', icon: 'description', class: '' },
+    { path: '/dashboard', title: 'Estatísticas', icon: 'dashboard', class: '' },
     { path: '/user-profile', title: 'Perfil', icon: 'person', class: '' },
-    { path: '/table-list', title: 'Table List', icon: 'content_paste', class: '' },
-    { path: '/typography', title: 'Typography', icon: 'library_books', class: '' },
-    { path: '/icons', title: 'Icons', icon: 'bubble_chart', class: '' },
-    { path: '/maps', title: 'Maps', icon: 'location_on', class: '' },
+    //{ path: '/table-list', title: 'Table List', icon: 'content_paste', class: '' },
+    //{ path: '/typography', title: 'Typography', icon: 'library_books', class: '' },
+    //{ path: '/icons', title: 'Icons', icon: 'bubble_chart', class: '' },
+    //{ path: '/maps', title: 'Maps', icon: 'location_on', class: '' },
     { path: '/notifications', title: 'Notificações', icon: 'notifications', class: '' },
 ];
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent(accountService) {
         var _this = this;
         this.accountService = accountService;
-        this.firstName = localStorage.getItem('firstName');
+        //user: User;
+        this.user = JSON.parse(localStorage.getItem('user'));
+        this.nome = this.user.nome;
+        //notification
+        this.orcamentos = [];
+        this.total = 0;
         this.accountService.user.subscribe(function (x) { return _this.user = x; });
     }
     SidebarComponent.prototype.ngOnInit = function () {
+        this.listOrcs(this.user.id);
         this.menuItems = ROUTES.filter(function (menuItem) { return menuItem; });
     };
     SidebarComponent.prototype.isMobileMenu = function () {
@@ -2431,8 +2836,17 @@ var SidebarComponent = /** @class */ (function () {
     };
     ;
     SidebarComponent.prototype.logout = function () {
-        console.log('to aqui');
         this.accountService.logout();
+    };
+    //LIST PENDING ORCS
+    SidebarComponent.prototype.listOrcs = function (idUser) {
+        var _this = this;
+        this.accountService.getPendingOrcs(idUser)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
+            .subscribe(function (x) {
+            _this.orcamentos = x['orcamentos'];
+            _this.total = x['totalElements'];
+        });
     };
     SidebarComponent.ctorParameters = function () { return [
         { type: app_services__WEBPACK_IMPORTED_MODULE_3__["AccountService"] }

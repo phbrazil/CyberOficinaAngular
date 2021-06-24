@@ -135,8 +135,6 @@ var LoginComponent = /** @class */ (function () {
         this.accountService.login(this.f.username.value, this.f.password.value)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["first"])())
             .subscribe(function (data) {
-            localStorage.setItem('firstName', data.firstName);
-            localStorage.setItem('lastName', data.lastName);
             _this.router.navigate([_this.returnUrl]);
         }, function (error) {
             if (error.status == 401) {
@@ -183,7 +181,7 @@ var LoginComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FjY291bnQvbG9naW4uY29tcG9uZW50LnNjc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px) {\n  .position {\n    z-index: -1000000;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9sb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJO0lBRUksaUJBQUE7RUFETjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvYWNjb3VudC9sb2dpbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIC5wb3NpdGlvbntcbiAgICAgICAgLy9wb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHotaW5kZXg6IC0xMDAwMDAwO1xuICAgIH1cbiAgfSJdfQ== */");
 
 /***/ }),
 
@@ -247,7 +245,7 @@ var AccountModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card\">\n    <div class=\"col-md-12\">\n        <div class=\"row\">\n            <div class=\"intro-content\">\n                <div class=\"col-md-12\">\n                    <div class=\"d-flex justify-content-left mt-2\">\n                        <img src=\"assets/img/logo_home.png\" style='width: 20%; height: 20%'\n                            class=\"img-responsive img-centered\" alt=\"\">\n                        <div class=\"brand-name mb-2 text-muted mt-4\">\n                            <h2>Cyber Oficina</h2>\n                        </div>\n                    </div>\n                    <div class=\"col-md-10\">\n                        <div class=\"brand-name-subtext text-muted mt-4\"><strong>Encontre um especialista sem sair de\n                                casa</strong>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"card-body\">\n        <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\n            <div class=\"form-group\">\n                <label for=\"username\">Usuário/Email</label>\n                <input type=\"text\" formControlName=\"username\" class=\"form-control\"\n                    [ngClass]=\"{ 'is-invalid': submitted && f.username.errors }\" />\n                <div *ngIf=\"submitted && f.username.errors\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.username.errors.required\">Usuário ou Email necessário</div>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Senha</label>\n                <input type=\"password\" formControlName=\"password\" class=\"form-control\"\n                    [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n                <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.password.errors.required\">Senha necessária</div>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <button [disabled]=\"loading\" class=\"btn btn-primary\">\n                    <span *ngIf=\"loading\" class=\"spinner-border spinner-border-sm mr-1\"></span>\n                    Entrar\n                </button>\n                <a routerLink=\"../register\" class=\"btn btn-link\">Registrar</a>\n            </div>\n        </form>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"position\">\n    <div class=\"card\">\n        <div class=\"col-md-12\">\n            <div class=\"row\">\n                <div class=\"intro-content\">\n                    <div class=\"col-md-12\">\n                        <div class=\"d-flex justify-content-left mt-2\">\n                            <img src=\"assets/img/logo_home.png\" style='width: 20%; height: 20%'\n                                class=\"img-responsive img-centered\" alt=\"\">\n                            <div class=\"brand-name mb-2 text-muted mt-4\">\n                                <h2>Cyber Oficina</h2>\n                            </div>\n                        </div>\n                        <div class=\"col-md-10\">\n                            <div class=\"brand-name-subtext text-muted mt-4\"><strong>Encontre um especialista sem sair de\n                                    casa</strong>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"card-body\">\n            <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\n                <div class=\"form-group\">\n                    <label for=\"username\">Email</label>\n                    <input type=\"text\" formControlName=\"username\" class=\"form-control\"\n                        [ngClass]=\"{ 'is-invalid': submitted && f.username.errors }\" />\n                    <div *ngIf=\"submitted && f.username.errors\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.username.errors.required\">Email necessário</div>\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"password\">Senha</label>\n                    <input type=\"password\" formControlName=\"password\" class=\"form-control\"\n                        [ngClass]=\"{ 'is-invalid': submitted && f.password.errors }\" />\n                    <div *ngIf=\"submitted && f.password.errors\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.password.errors.required\">Senha necessária</div>\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <button [disabled]=\"loading\" class=\"btn btn-primary\">\n                        <span *ngIf=\"loading\" class=\"spinner-border spinner-border-sm mr-1\"></span>\n                        Entrar\n                    </button>\n                    <a routerLink=\"../register\" class=\"btn btn-link\">Registrar</a>\n                </div>\n                <div class=\"row\">\n                    <a routerLink=\"/reset-password\" class=\"btn btn-link text-danger\">Esqueci a Senha</a>\n                </div>\n            </form>\n        </div>\n    </div>\n</div>\n");
 
 /***/ }),
 
@@ -266,6 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout.component */ "CKnY");
 /* harmony import */ var _login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login.component */ "YF+o");
 /* harmony import */ var _register_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./register.component */ "q8HH");
+/* harmony import */ var _reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reset-password/reset-password.component */ "WPDf");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -277,12 +276,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     {
         path: '', component: _layout_component__WEBPACK_IMPORTED_MODULE_2__["LayoutComponent"],
         children: [
             { path: 'login', component: _login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
-            { path: 'register', component: _register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"] }
+            { path: 'register', component: _register_component__WEBPACK_IMPORTED_MODULE_4__["RegisterComponent"] },
+            { path: 'reset-password', component: _reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_5__["ResetPasswordComponent"] },
         ]
     }
 ];

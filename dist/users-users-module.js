@@ -236,11 +236,11 @@ var AddEditComponent = /** @class */ (function () {
             this.accountService.getById(this.id)
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
                 .subscribe(function (x) {
-                _this.f.firstName.setValue(x.firstName);
-                _this.f.lastName.setValue(x.lastName);
-                _this.f.username.setValue(x.username);
+                _this.f.nome.setValue(x.nome);
+                //this.f.lastName.setValue(x.lastName);
+                //this.f.username.setValue(x.username);
                 _this.f.email.setValue(x.email);
-                _this.f.cpfcnpj.setValue(x.cpfcnpj);
+                _this.f.cpfcnpj.setValue(x.cpf);
             });
         }
     };
