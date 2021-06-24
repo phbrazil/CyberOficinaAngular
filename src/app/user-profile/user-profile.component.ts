@@ -118,12 +118,25 @@ export class UserProfileComponent implements OnInit {
 
             },
             error => {
-              this.alertService.error(error);
+
+              //this.alertService.error(error);
               this.isLoadingCEP = false;
             });
+      } else {
+
+        //LIMPA FORMULARIO SE CEP FOR INVALIDO
+        let address = {
+          logradouro: '',
+          bairro: '',
+          cidade: '',
+          estado: '',
+          uf: '',
+          cep: ''
+        }
+
+        this.profile.patchValue(address);
+
       }
-    } else {
-      this.alertService.error('Cep inválido', { keepAfterRouteChange: true });
     }
   }
 
