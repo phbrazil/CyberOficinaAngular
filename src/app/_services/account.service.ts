@@ -59,8 +59,7 @@ export class AccountService {
 
                 return this.http.get<any>(url)
                     .pipe(map(dados => {
-                        this.alertService.success('Cep válido', { keepAfterRouteChange: true });
-                        console.log(dados);
+                        //this.alertService.success('Cep válido', { keepAfterRouteChange: true });
 
                         switch (dados.dados.uf) {
                             case 'RO':
