@@ -54,7 +54,14 @@ export class ResetPasswordComponent implements OnInit {
       .subscribe(
         data => {
 
-          this.alertService.info('Em breve você receberá um email com informações');
+          //data = JSON.parse(JSON.stringify(data));
+          if(data != null && data.dados.status === true){
+            this.alertService.info('Em breve você receberá um email com informações');
+
+          }else{
+            this.alertService.error('Email não encontrado em nossa base');
+
+          }
 
           this.form.reset();
           this.loading = false;
