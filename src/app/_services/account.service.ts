@@ -154,11 +154,10 @@ export class AccountService {
 
     login(username, password) {
 
-        //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
 
-        //const url = 'http://localhost:8080/cyberoficina/api/auth/signin';
+        //const url = 'http://localhost:8080/account/api/auth/signin';
 
-        const url = 'https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signin';
+        const url = 'https://cyberoficina.herokuapp.com/account/api/auth/signin';
 
         return this.http.post<User>(url, { username, password })
             .pipe(map(user => {
@@ -197,7 +196,7 @@ export class AccountService {
 
         var header = {
             headers: new HttpHeaders()
-                .set('Authorization', `Basic ${btoa(token)}`)
+                .set('Authorization', `Bearer ${btoa(token)}`)
         }
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
 
@@ -226,14 +225,13 @@ export class AccountService {
 
         var header = {
             headers: new HttpHeaders()
-                .set('Authorization', `Basic ${btoa(token)}`)
+                .set('Authorization', `Bearer ${token}`)
         }
 
-        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
 
-        //const url = `http://localhost:8080/cyberoficina/api/auth/user/${id}`;
+        //const url = `http://localhost:8080/account/api/auth/user/${id}`;
 
-        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/user/${id}`
+        const url = `https://cyberoficina.herokuapp.com/account/api/auth/user/${id}`
 
 
         return this.http.get<User>(url, header);
@@ -241,9 +239,8 @@ export class AccountService {
 
     update(id, params) {
 
-        //const url = `http://localhost:8080/cyberoficina/api/auth/editUsuario/${id}`;
-        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUsuario/${id}`;
-        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/editUsuario/${id}`
+        //const url = `http://localhost:8080/account/api/auth/editUsuario/${id}`;
+        const url = `https://cyberoficina.herokuapp.com/account/api/auth/editUsuario/${id}`
 
         return this.http.put(url, params)
 
@@ -264,9 +261,9 @@ export class AccountService {
 
     delete(id: string) {
 
-        //const url = `http://localhost:8080/cyberoficina/api/auth/deleteUser/${id}`;
-        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
-        const url = `https://cyberoficina.herokuapp.com/cyberoficina/api/auth/deleteUser/${id}`
+        //const url = `http://localhost:8080/account/api/auth/deleteUser/${id}`;
+        const url = `https://cyberoficina.herokuapp.com/account/api/auth/deleteUser/${id}`
+        
         return this.http.delete(url)
 
             // return this.http.delete(`${environment.apiUrl}/users/${id}`)
@@ -279,50 +276,30 @@ export class AccountService {
             }));
     }
 
-    getPendingOrcs(idUser: String) {
-
-        const token = localStorage.getItem('token');
-
-        var header = {
-            headers: new HttpHeaders()
-                .set('Authorization', `Basic ${btoa(token)}`)
-        }
-
-        //const url = `http://localhost:8080/cyberoficina/api/auth/listOrcamentos/${idUser}/0/10`;
-
-        const url = `https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/${idUser}/0/10`;
-
-        return this.http.get(url, header);
-    }
-
     listOrcs(idUser: String) {
 
         const token = localStorage.getItem('token');
 
         var header = {
             headers: new HttpHeaders()
-                .set('Authorization', `Basic ${btoa(token)}`)
+                .set('Authorization', `Bearer ${token}`)
         }
 
-        //const url = `http://localhost:8080/cyberoficina/api/auth/listOrcamentos/${idUser}/0/10`;
+        //const url = `http://localhost:8080/cyberoficina/listOrcamentos/${idUser}/0/10`;
 
-        const url = 'https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/16/0/10';
+        const url = `https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/${idUser}/0/10`;
 
         return this.http.get(url, header);
     }
 
     resetPassword(email) {
 
-         let body = {
-            "dados": {
-                "email": email
-            }
+        let body = {
+            "email": email
         }
 
-        return this.http.post<any>('https://cyberoficina.herokuapp.com/cyberoficina/resetPassword', body);
-        //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', body);
-        //return this.http.post<any>('http://localhost:8080/cyberoficina/resetPassword', body);
-
+        //return this.http.post<any>('http://localhost:8080/account/api/auth/resetPassword', body);
+        return this.http.post<any>('https://cyberoficina.herokuapp.com/account/api/auth/resetPassword', body);
 
     }
 

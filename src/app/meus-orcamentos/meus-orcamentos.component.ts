@@ -23,7 +23,7 @@ export class MeusOrcamentosComponent implements OnInit {
    //LIST PENDING ORCS
    listOrcs(idUser: string) {
 
-    this.accountService.getPendingOrcs(idUser)
+    this.accountService.listOrcs(idUser)
       .pipe(first())
       .subscribe(x => {
 

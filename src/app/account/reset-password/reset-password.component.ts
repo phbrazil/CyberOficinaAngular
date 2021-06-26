@@ -55,7 +55,7 @@ export class ResetPasswordComponent implements OnInit {
         data => {
 
           //data = JSON.parse(JSON.stringify(data));
-          if(data != null && data.dados.status === true){
+          if(data != null && data.status === true){
             this.alertService.info('Em breve você receberá um email com informações');
 
           }else{

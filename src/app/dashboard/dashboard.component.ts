@@ -84,7 +84,6 @@ export class DashboardComponent implements OnInit {
   }
   ngOnInit() {
     
-    this.getPendingOrcs(this.user.id);
     this.listOrcs(this.user.id);
 
     this.isLogged = true;
@@ -169,27 +168,18 @@ export class DashboardComponent implements OnInit {
     this.startAnimationForBarChart(websiteViewsChart);
   }
 
-  //GET PENDING ORCS QTD
-  getPendingOrcs(idUser: string) {
-    this.accountService.getPendingOrcs(idUser)
-      .pipe(first())
-      .subscribe(x => {
-
-        this.pendingOrcs = x['totalElements'];
-
-      });
-  }
-
    //LIST PENDING ORCS
    listOrcs(idUser: string) {
 
-    this.accountService.getPendingOrcs(idUser)
+    this.accountService.listOrcs(idUser)
       .pipe(first())
       .subscribe(x => {
 
         let orcamentos = [];
 
         orcamentos = x['orcamentos'];
+        this.pendingOrcs = x['totalElements'];
+
 
       });
   }
