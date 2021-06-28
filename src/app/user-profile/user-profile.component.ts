@@ -51,7 +51,7 @@ export class UserProfileComponent implements OnInit {
   ngOnInit() {
 
     this.profile = this.formBuilder.group({
-      cep: ['', Validators.required],
+      cep: ['', Validators.required, Validators.maxLength(9), Validators.pattern(/^[0-9]*$/)],
       logradouro: ['', Validators.required],
       numero: ['', Validators.required],
       bairro: ['', Validators.required],

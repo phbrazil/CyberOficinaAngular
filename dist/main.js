@@ -197,7 +197,6 @@ var AccountService = /** @class */ (function () {
         console.log(message);
     };
     AccountService.prototype.cep = function (cep) {
-        var _this = this;
         cep = cep.replace(/\D/g, '');
         if (cep !== '') {
             var validaCep = /^[0-9]{8}$/;
@@ -206,8 +205,7 @@ var AccountService = /** @class */ (function () {
                 var url = "https://cyberoficina.herokuapp.com/cyberoficina/getCep/" + cep;
                 return this.http.get(url)
                     .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (dados) {
-                    _this.alertService.success('Cep válido', { keepAfterRouteChange: true });
-                    console.log(dados);
+                    //this.alertService.success('Cep válido', { keepAfterRouteChange: true });
                     switch (dados.dados.uf) {
                         case 'RO':
                             dados.dados.estado = 'Rondônia';
@@ -297,10 +295,9 @@ var AccountService = /** @class */ (function () {
         }
     };
     AccountService.prototype.login = function (username, password) {
-        //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signin';
+        //const url = 'http://localhost:8080/account/api/auth/signin';
         var _this = this;
-        //const url = 'http://localhost:8080/cyberoficina/api/auth/signin';
-        var url = 'https://cyberoficina.herokuapp.com/cyberoficina/api/auth/signin';
+        var url = 'https://cyberoficina.herokuapp.com/account/api/auth/signin';
         return this.http.post(url, { username: username, password: password })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -330,7 +327,7 @@ var AccountService = /** @class */ (function () {
         var token = localStorage.getItem('token');
         var header = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
-                .set('Authorization', "Basic " + btoa(token))
+                .set('Authorization', "Bearer " + btoa(token))
         };
         //const url = 'https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/users';
         //const url = 'http://localhost:8080/cyberoficina/api/auth/users';
@@ -346,18 +343,16 @@ var AccountService = /** @class */ (function () {
         var token = localStorage.getItem('token');
         var header = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
-                .set('Authorization', "Basic " + btoa(token))
+                .set('Authorization', "Bearer " + token)
         };
-        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/user/${id}`;
-        //const url = `http://localhost:8080/cyberoficina/api/auth/user/${id}`;
-        var url = "https://cyberoficina.herokuapp.com/cyberoficina/api/auth/user/" + id;
+        //const url = `http://localhost:8080/account/api/auth/user/${id}`;
+        var url = "https://cyberoficina.herokuapp.com/account/api/auth/user/" + id;
         return this.http.get(url, header);
     };
     AccountService.prototype.update = function (id, params) {
         var _this = this;
-        //const url = `http://localhost:8080/cyberoficina/api/auth/editUser/${id}`;
-        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/editUser/${id}`;
-        var url = "https://cyberoficina.herokuapp.com/cyberoficina/api/auth/editUser/" + id;
+        //const url = `http://localhost:8080/account/api/auth/editUsuario/${id}`;
+        var url = "https://cyberoficina.herokuapp.com/account/api/auth/editUsuario/" + id;
         return this.http.put(url, params)
             //return this.http.put(`${environment.apiUrl}/users/${id}`, params)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (x) {
@@ -374,9 +369,8 @@ var AccountService = /** @class */ (function () {
     };
     AccountService.prototype.delete = function (id) {
         var _this = this;
-        //const url = `http://localhost:8080/cyberoficina/api/auth/deleteUser/${id}`;
-        //const url = `https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/deleteUser/${id}`;
-        var url = "https://cyberoficina.herokuapp.com/cyberoficina/api/auth/deleteUser/" + id;
+        //const url = `http://localhost:8080/account/api/auth/deleteUser/${id}`;
+        var url = "https://cyberoficina.herokuapp.com/account/api/auth/deleteUser/" + id;
         return this.http.delete(url)
             // return this.http.delete(`${environment.apiUrl}/users/${id}`)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (x) {
@@ -387,35 +381,22 @@ var AccountService = /** @class */ (function () {
             return x;
         }));
     };
-    AccountService.prototype.getPendingOrcs = function (idUser) {
-        var token = localStorage.getItem('token');
-        var header = {
-            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
-                .set('Authorization', "Basic " + btoa(token))
-        };
-        //const url = `http://localhost:8080/cyberoficina/api/auth/listOrcamentos/${idUser}/0/10`;
-        var url = "https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/" + idUser + "/0/10";
-        return this.http.get(url, header);
-    };
     AccountService.prototype.listOrcs = function (idUser) {
         var token = localStorage.getItem('token');
         var header = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
-                .set('Authorization', "Basic " + btoa(token))
+                .set('Authorization', "Bearer " + token)
         };
-        //const url = `http://localhost:8080/cyberoficina/api/auth/listOrcamentos/${idUser}/0/10`;
-        var url = 'https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/16/0/10';
+        //const url = `http://localhost:8080/cyberoficina/listOrcamentos/${idUser}/0/10`;
+        var url = "https://cyberoficina.herokuapp.com/cyberoficina/listOrcamentos/" + idUser + "/0/10";
         return this.http.get(url, header);
     };
     AccountService.prototype.resetPassword = function (email) {
         var body = {
-            "dados": {
-                "email": email
-            }
+            "email": email
         };
-        return this.http.post('https://cyberoficina.herokuapp.com/cyberoficina/resetPassword', body);
-        //return this.http.post('https://www.cyberoficina.com.br:8443/cyberoficina/api/auth/signup', body);
-        //return this.http.post('http://localhost:8080/cyberoficina/resetPassword', body);
+        //return this.http.post<any>('http://localhost:8080/account/api/auth/resetPassword', body);
+        return this.http.post('https://cyberoficina.herokuapp.com/account/api/auth/resetPassword', body);
     };
     AccountService.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
@@ -457,7 +438,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px) {\n    .position{\n        position: relative;\n        z-index: 2;\n    }\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7RUFDRiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIC5wb3NpdGlvbntcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB6LWluZGV4OiAyO1xuICAgIH1cbiAgfSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px) {\n    .position{\n        position: relative;\n        z-index: 2;\n    }\n  }\n\n  .transparencia-alert {\n    padding: 0px;\n    border: 1px solid transparent;\n    background-color: transparent;\n    /*       color: red;*/\n    overflow: hidden;\n    position: absolute; \n    cursor: default;\n    z-index: 999999!important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTtRQUNJLGtCQUFrQjtRQUNsQixVQUFVO0lBQ2Q7RUFDRjs7RUFFQTtJQUNFLFlBQVk7SUFDWiw2QkFBNkI7SUFDN0IsNkJBQTZCO0lBQzdCLHFCQUFxQjtJQUNyQixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZix5QkFBeUI7QUFDN0IiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICAucG9zaXRpb257XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgei1pbmRleDogMjtcbiAgICB9XG4gIH1cblxuICAudHJhbnNwYXJlbmNpYS1hbGVydCB7XG4gICAgcGFkZGluZzogMHB4O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIC8qICAgICAgIGNvbG9yOiByZWQ7Ki9cbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsgXG4gICAgY3Vyc29yOiBkZWZhdWx0O1xuICAgIHotaW5kZXg6IDk5OTk5OSFpbXBvcnRhbnQ7XG59Il19 */");
 
 /***/ }),
 
@@ -1294,7 +1275,7 @@ var AppComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container h-100 d-flex justify-content-center\">\n    <!--div class=\"col-md-6\" style=\"position: absolute; z-index: 1000;\"-->\n    <div class=\"col-md-6\">\n        <div *ngFor=\"let alert of alerts\" class=\"{{cssClass(alert)}}\" >\n            <a class=\"close\" (click)=\"removeAlert(alert)\">&times;</a>\n            <span [innerHTML]=\"alert.message\"></span>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container h-100 d-flex justify-content-center\">\n    <div class=\"col-md-6\">\n        <div *ngFor=\"let alert of alerts\" class=\"{{cssClass(alert)}} alert\">\n            <div class=\"toast-header text-light\" style=\"background-color: transparent;\">\n                <img src=\"../../../assets/img/logo_home.png\" style=\"width: 15%; height: 15%\" class=\"rounded mr-2\" alt=\"Logo Cyber Oficina\">\n                <strong>Cyber Oficina</strong>\n            </div>\n            <div class=\"toast-body\">\n                <a class=\"close\" (click)=\"removeAlert(alert)\">&times;</a>\n                <span [innerHTML]=\"alert.message\"></span>\n            </div>\n        </div>\n    </div>\n</div>\n\n<script>\n    window.setTimeout(function() {\n    $(\".alert\").fadeTo(500, 0).slideUp(500, function(){\n        $(this).remove(); \n    });\n}, 2000);\n</script>");
 
 /***/ }),
 
@@ -1307,7 +1288,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!user\" class=\"position\">\n    <app-navbar-login></app-navbar-login>\n</div>\n\n<div [ngClass]=\"{ 'bg-light': user }\">\n    <app-alert></app-alert>\n    <router-outlet></router-outlet>\n</div>\n\n<!--CHAMAR MODAL-->\n<!--button class=\"btn btn-sm btn-secondary\" (click)=\"openModal('custom-modal-1', 'Field 1')\">Abrir Modal</button>\n\n<jw-modal id=\"custom-modal-1\">\n<h1>huhueheuehu</h1>\n<button class=\"btn btn-sm btn-secondary\" (click)=\"closeModal('custom-modal-1');\">Fechar</button>\n</jw-modal-->");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!user\" class=\"position\">\n    <app-navbar-login></app-navbar-login>\n</div>\n\n<div [ngClass]=\"{ 'bg-light': user }\">\n    <app-alert class=\"transparencia-alert col-md-12 mt-4\"></app-alert>\n    <router-outlet></router-outlet>\n</div>\n\n<!--CHAMAR MODAL-->\n<!--button class=\"btn btn-sm btn-secondary\" (click)=\"openModal('custom-modal-1', 'Field 1')\">Abrir Modal</button>\n\n<jw-modal id=\"custom-modal-1\">\n<h1>huhueheuehu</h1>\n<button class=\"btn btn-sm btn-secondary\" (click)=\"closeModal('custom-modal-1');\">Fechar</button>\n</jw-modal-->");
 
 /***/ }),
 
@@ -1380,7 +1361,13 @@ var ResetPasswordComponent = /** @class */ (function () {
         this.accountService.resetPassword(this.f.email.value)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["first"])())
             .subscribe(function (data) {
-            _this.alertService.info('Em breve você receberá um email com informações');
+            //data = JSON.parse(JSON.stringify(data));
+            if (data != null && data.status === true) {
+                _this.alertService.info('Em breve você receberá um email com informações');
+            }
+            else {
+                _this.alertService.error('Email não encontrado em nossa base');
+            }
             _this.form.reset();
             _this.loading = false;
             //this.router.navigate([this.returnUrl]);
@@ -1950,7 +1937,7 @@ var NavbarComponent = /** @class */ (function () {
     //LIST PENDING ORCS
     NavbarComponent.prototype.listOrcs = function (idUser) {
         var _this = this;
-        this.accountService.getPendingOrcs(idUser)
+        this.accountService.listOrcs(idUser)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["first"])())
             .subscribe(function (x) {
             _this.orcamentos = x['orcamentos'];
@@ -2734,7 +2721,7 @@ var MeusOrcamentosComponent = /** @class */ (function () {
     //LIST PENDING ORCS
     MeusOrcamentosComponent.prototype.listOrcs = function (idUser) {
         var _this = this;
-        this.accountService.getPendingOrcs(idUser)
+        this.accountService.listOrcs(idUser)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
             .subscribe(function (x) {
             _this.orcamentos = x['orcamentos'];
@@ -2841,7 +2828,7 @@ var SidebarComponent = /** @class */ (function () {
     //LIST PENDING ORCS
     SidebarComponent.prototype.listOrcs = function (idUser) {
         var _this = this;
-        this.accountService.getPendingOrcs(idUser)
+        this.accountService.listOrcs(idUser)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["first"])())
             .subscribe(function (x) {
             _this.orcamentos = x['orcamentos'];

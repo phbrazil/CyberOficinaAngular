@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
           <label for="cpfcnpj">CPF / CNPJ</label>
-          <input matInput mask="000.000.000-00||00.000.000/0000-00" type="text" formControlName="cpfcnpj"
+          <input [mask]="getCpfCnpjMask()" matInput type="text" formControlName="cpfcnpj"
             class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cpfcnpj.errors }" />
           <div *ngIf="submitted && f.cpfcnpj.errors" class="invalid-feedback">
             <div *ngIf="f.cpfcnpj.errors.required">CPF/CNPJ necessário</div>

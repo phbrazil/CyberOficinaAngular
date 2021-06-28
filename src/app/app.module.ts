@@ -19,6 +19,13 @@ import { NavbarLoginComponent } from './components/navbar-login/navbar-login.com
 import { OrcamentoComponent } from './orcamento/orcamento.component';
 import { MeusOrcamentosComponent } from './meus-orcamentos/meus-orcamentos.component';
 import { ResetPasswordComponent } from './account/reset-password/reset-password.component';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
 
 @NgModule({
   imports: [
@@ -34,7 +41,9 @@ import { ResetPasswordComponent } from './account/reset-password/reset-password.
     ModalLoginModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBo5g3bCuE-_XSzmz6_7RC-R8d9YgkHILA'
-    })
+    }),
+    NgxMaskModule.forRoot(maskConfigFunction),
+
   ],
   declarations: [
     AppComponent,
