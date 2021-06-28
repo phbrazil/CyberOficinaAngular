@@ -50,7 +50,7 @@ var UserProfileComponent = /** @class */ (function () {
     UserProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.profile = this.formBuilder.group({
-            cep: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            cep: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(9), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(/^[0-9]*$/)],
             logradouro: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             numero: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             bairro: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
