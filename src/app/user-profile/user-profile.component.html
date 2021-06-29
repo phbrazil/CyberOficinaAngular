@@ -37,7 +37,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <mat-form-field class="example-full-width">
-                    <input (change)="getCep($event.target.value)" formControlName="cep" matInput 
+                    <input [mask]="getCepMask()" (change)="getCep($event.target.value)" formControlName="cep" matInput 
                       placeholder="CEP" type="text" [ngClass]="{ 'is-invalid': submitted && a.cep.errors }" />
                     <div *ngIf="submitted && a.cep.errors" class="invalid-feedback">
                       <div *ngIf="a.cep.errors.required">CEP necessário</div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput formControlName="logradouro" placeholder="Rua" type="text"
+                    <input matInput readonly formControlName="logradouro" placeholder="Rua" type="text"
                       [ngClass]="{ 'is-invalid': submitted && a.logradouro.errors }" />
                     <div *ngIf="submitted && a.logradouro.errors" class="invalid-feedback">
                       <div *ngIf="a.logradouro.errors.required">Logradouro necessário</div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="col-md-4">
                   <mat-form-field class="example-full-width">
-                    <input matInput value="{{bairro}}" formControlName="bairro" placeholder="Bairro" type="text"
+                    <input matInput readonly value="{{bairro}}" formControlName="bairro" placeholder="Bairro" type="text"
                       [ngClass]="{ 'is-invalid': submitted && a.bairro.errors }" />
                     <div *ngIf="submitted && a.bairro.errors" class="invalid-feedback">
                       <div *ngIf="a.bairro.errors.required">Bairro necessário</div>
@@ -79,7 +79,7 @@
 
                 <div class="col-md-4">
                   <mat-form-field class="example-full-width">
-                    <input matInput formControlName="cidade" placeholder="Cidade" type="text"
+                    <input matInput readonly formControlName="cidade" placeholder="Cidade" type="text"
                       [ngClass]="{ 'is-invalid': submitted && a.cidade.errors }" />
                     <div *ngIf="submitted && a.cidade.errors" class="invalid-feedback">
                       <div *ngIf="a.cidade.errors.required">Cidade necessária</div>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-md-4">
                   <mat-form-field class="example-full-width">
-                    <input matInput formControlName="uf" placeholder="Estado" type="text"
+                    <input matInput readonly formControlName="uf" placeholder="Estado" type="text"
                       [ngClass]="{ 'is-invalid': submitted && a.uf.errors }" />
                     <div *ngIf="submitted && a.uf.errors" class="invalid-feedback">
                       <div *ngIf="a.uf.errors.required">UF necessária</div>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-md-4">
                   <mat-form-field class="example-full-width">
-                    <input matInput formControlName="pais" placeholder="País" type="text">
+                    <input matInput readonly formControlName="pais" placeholder="País" type="text">
                   </mat-form-field>
                 </div>
               </div>

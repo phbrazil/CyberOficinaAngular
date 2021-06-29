@@ -1,11 +1,15 @@
-﻿import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService, AlertService } from 'app/_services';
 
-@Component({ templateUrl: 'register.component.html',
-selector: 'app-register',
+@Component({
+    templateUrl: 'register.component.html',
+    selector: 'app-register',
+    styleUrls: ['./register.component.scss'],
+    //ISSO ALTERA O BODY COLOR PARA O DO .SCSS
+    encapsulation: ViewEncapsulation.None
 })
 export class RegisterComponent implements OnInit {
 
@@ -14,15 +18,20 @@ export class RegisterComponent implements OnInit {
     loading = false;
     submitted = false;
 
-    isCPF(): boolean{
+    //MASKS
+    isCPF(): boolean {
         return this.formulario.value.cpfcnpj == null ? true : this.formulario.value.cpfcnpj.length < 12 ? true : false;
-     }
-     
-     getCpfCnpjMask(): string{
-        return this.isCPF() ? '000.000.000-009' : '00.000.000/0000-00';
-     }
+    }
 
- 
+    getCpfCnpjMask(): string {
+        return this.isCPF() ? '000.000.000-009' : '00.000.000/0000-00';
+    }
+
+    getCepMask(): string {
+        return '00000-009';
+    }
+
+
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -32,19 +41,19 @@ export class RegisterComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        
+
         this.address = this.formBuilder.group({
             logradouro: ['', Validators.required],
             bairro: ['', Validators.required],
-            cidade: ['', Validators.required],     
-            estado: ['', Validators.required],    
-            uf: ['', Validators.required],    
+            cidade: ['', Validators.required],
+            estado: ['', Validators.required],
+            uf: ['', Validators.required],
         });
 
         this.formulario = this.formBuilder.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            username: ['', Validators.required],
+            name: ['', Validators.required],
+            //lastName: ['', Validators.required],
+            //username: ['', Validators.required],
             email: ['', Validators.required],
             cpfcnpj: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]],
@@ -54,10 +63,10 @@ export class RegisterComponent implements OnInit {
                 numero: ['', Validators.required],
                 complemento: [''],
                 bairro: ['', Validators.required],
-                cidade: ['', Validators.required],     
-                estado: ['', Validators.required],    
-                uf: ['', Validators.required],    
-              })
+                cidade: ['', Validators.required],
+                estado: ['', Validators.required],
+                uf: ['', Validators.required],
+            })
         });
     }
 
@@ -65,37 +74,37 @@ export class RegisterComponent implements OnInit {
     get f() { return this.formulario.controls; }
     get a() { return this.address.controls; }
 
-  
+
     getCep(cep: string): void {
-        
-        cep = cep.replace(/\D/g,'');
 
-        if(cep!==''){
+        cep = cep.replace(/\D/g, '');
 
-        const validaCep = /^[0-9]{8}$/;
+        if (cep !== '') {
 
-    if(validaCep.test(cep)){
+            const validaCep = /^[0-9]{8}$/;
 
-        this.accountService.cep(cep)
-            .pipe(first())
-            .subscribe(
-                dados => {
+            if (validaCep.test(cep)) {
 
-                    this.patchAddress(dados);
+                this.accountService.cep(cep)
+                    .pipe(first())
+                    .subscribe(
+                        dados => {
 
-                },
-                error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                });     
+                            this.patchAddress(dados);
+
+                        },
+                        error => {
+                            this.alertService.error("Cep inválido");
+                            this.loading = false;
+                        });
+            } else {
+                this.alertService.error('Cep inválido', { keepAfterRouteChange: true });
             }
-        }else{
-            this.alertService.error('Cep inválido', { keepAfterRouteChange: true });
         }
     }
 
     patchAddress(dados) {
- 
+
         let address = {
             logradouro: dados.dados.logradouro,
             bairro: dados.dados.bairro,
@@ -104,7 +113,7 @@ export class RegisterComponent implements OnInit {
             complemento: dados.dados.complemento,
             uf: dados.dados.uf,
         }
-    
+
         this.formulario.get('address').patchValue(address);
     }
 
@@ -120,8 +129,8 @@ export class RegisterComponent implements OnInit {
 
             return;
         }
-        if(this.formulario.get('address').invalid){
-            
+        if (this.formulario.get('address').invalid) {
+
             return;
         }
 

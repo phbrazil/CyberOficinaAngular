@@ -47,11 +47,16 @@ export class UserProfileComponent implements OnInit {
   ) { }
 
 
+  //MASKS
+  getCepMask(): string {
+    return '00000-009';
+  }
+
 
   ngOnInit() {
 
     this.profile = this.formBuilder.group({
-      cep: ['', Validators.required, Validators.maxLength(9), Validators.pattern(/^[0-9]*$/)],
+      cep: ['', Validators.required],
       logradouro: ['', Validators.required],
       numero: ['', Validators.required],
       bairro: ['', Validators.required],
@@ -119,7 +124,19 @@ export class UserProfileComponent implements OnInit {
             },
             error => {
 
-              //this.alertService.error(error);
+              //LIMPA FORMULARIO SE CEP FOR INVALIDO
+              let address = {
+                logradouro: '',
+                bairro: '',
+                cidade: '',
+                estado: '',
+                uf: '',
+                cep: ''
+              }
+
+              this.profile.patchValue(address);
+
+              this.alertService.error("Cep inválido");
               this.isLoadingCEP = false;
             });
       } else {
@@ -135,6 +152,8 @@ export class UserProfileComponent implements OnInit {
         }
 
         this.profile.patchValue(address);
+
+        this.alertService.error("Cep inválido");
 
       }
     }

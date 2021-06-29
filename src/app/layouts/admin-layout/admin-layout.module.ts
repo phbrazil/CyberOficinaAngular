@@ -18,6 +18,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { OrcamentoComponent } from 'app/orcamento/orcamento.component';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
 
 @NgModule({
   imports: [
@@ -31,6 +38,8 @@ import { OrcamentoComponent } from 'app/orcamento/orcamento.component';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    NgxMaskModule.forRoot(maskConfigFunction),
+
   ],
   declarations: [
     DashboardComponent,
