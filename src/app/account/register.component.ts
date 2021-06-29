@@ -42,18 +42,8 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
 
-        this.address = this.formBuilder.group({
-            logradouro: ['', Validators.required],
-            bairro: ['', Validators.required],
-            cidade: ['', Validators.required],
-            estado: ['', Validators.required],
-            uf: ['', Validators.required],
-        });
-
         this.formulario = this.formBuilder.group({
             name: ['', Validators.required],
-            //lastName: ['', Validators.required],
-            //username: ['', Validators.required],
             email: ['', Validators.required],
             cpfcnpj: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]],
@@ -67,6 +57,16 @@ export class RegisterComponent implements OnInit {
                 estado: ['', Validators.required],
                 uf: ['', Validators.required],
             })
+        });
+
+           this.address = this.formBuilder.group({
+            logradouro: ['', Validators.required],
+            numero: ['', Validators.required],
+            complemento: [''],
+            bairro: ['', Validators.required],
+            cidade: ['', Validators.required],
+            estado: ['', Validators.required],
+            uf: ['', Validators.required],
         });
     }
 

@@ -143,7 +143,7 @@
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-md-8">
+    <div class="form-group col-md-12">
       <label for="name">Nome Completo</label>
       <input type="text" formControlName="name" class="form-control"
         [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
@@ -151,7 +151,15 @@
         <div *ngIf="f.name.errors.required">Nome necessário</div>
       </div>
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
+      <label for="cpfcnpj">CPF / CNPJ</label>
+      <input [mask]="getCpfCnpjMask()" matInput type="text" formControlName="cpfcnpj" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.cpfcnpj.errors }" />
+      <div *ngIf="submitted && f.cpfcnpj.errors" class="invalid-feedback">
+        <div *ngIf="f.cpfcnpj.errors.required">CPF/CNPJ necessário</div>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
       <label for="cep">CEP</label>
       <input [mask]="getCepMask()" (change)="getCep($event.target.value)" formControlName="cep" type="text"
         class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
@@ -162,17 +170,29 @@
   </div>
   <div formGroupName="address">
     <div class="form-row">
-      <div class="form-group col-md-12">
+      <div class="form-group col-md-8">
         <label for="logradouro">Logradouro</label>
-        <input readonly formControlName="logradouro" type="text" class="form-control"
+        <input formControlName="logradouro" type="text" class="form-control"
           [ngClass]="{ 'is-invalid': submitted && a.logradouro.errors }" />
         <div *ngIf="submitted && a.logradouro.errors" class="invalid-feedback">
           <div *ngIf="a.logradouro.errors.required">Logradouro necessário</div>
         </div>
       </div>
+      <div class="form-group col-md-4">
+        <label for="numero">Número</label>
+        <input formControlName="numero" type="text" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && a.numero.errors }" />
+        <div *ngIf="submitted && a.numero.errors" class="invalid-feedback">
+          <div *ngIf="a.numero.errors.required">Número necessário</div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="complemento">Complemento</label>
+        <input formControlName="complemento" type="text" class="form-control" />
+      </div>
       <div class="form-group col-md-6">
         <label for="bairro">Bairro</label>
-        <input readonly type="text" formControlName="bairro" class="form-control"
+        <input type="text" formControlName="bairro" class="form-control"
           [ngClass]="{ 'is-invalid': submitted && a.bairro.errors }" />
         <div *ngIf="submitted && a.bairro.errors" class="invalid-feedback">
           <div *ngIf="a.bairro.errors.required">Bairro necessário</div>
@@ -180,7 +200,7 @@
       </div>
       <div class="form-group col-md-6">
         <label for="cidade">Cidade</label>
-        <input readonly type="text" formControlName="cidade" class="form-control"
+        <input type="text" formControlName="cidade" class="form-control"
           [ngClass]="{ 'is-invalid': submitted && a.cidade.errors }" />
         <div *ngIf="submitted && a.cidade.errors" class="invalid-feedback">
           <div *ngIf="a.cidade.errors.required">Cidade necessária</div>
@@ -188,15 +208,15 @@
       </div>
       <div class="form-group col-md-6">
         <label for="estado">Estado</label>
-        <input readonly type="text" formControlName="estado" class="form-control"
+        <input type="text" formControlName="estado" class="form-control"
           [ngClass]="{ 'is-invalid': submitted && a.estado.errors }" />
         <div *ngIf="submitted && a.estado.errors" class="invalid-feedback">
           <div *ngIf="a.estado.errors.required">Estado necessário</div>
         </div>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-2">
         <label for="uf">UF</label>
-        <input readonly type="text" formControlName="uf" class="form-control"
+        <input type="text" formControlName="uf" class="form-control"
           [ngClass]="{ 'is-invalid': submitted && a.uf.errors }" />
         <div *ngIf="submitted && a.uf.errors" class="invalid-feedback">
           <div *ngIf="a.uf.errors.required">Estado necessária</div>
